@@ -27,10 +27,18 @@ const Quiz = () => {
       />
       <Container variant={"responsive"}>
         <VStack spacing={{ base: "15px", md: "25px" }}>
-          <Heading variant={"title"} fontSize={"3xl"}>
+          <Heading
+            variant={"title"}
+            fontSize={{ base: "2xl", md: "3xl" }}
+            px={{ base: 2, sm: 4 }}
+          >
             Shop by Wellness Goal
           </Heading>
-          <Text fontWeight={"400"} textAlign={"center"} fontSize={"lg"}>
+          <Text
+            fontWeight={"400"}
+            textAlign={"center"}
+            fontSize={{ base: "md", sm: "xl" }}
+          >
             Whether you’re shopping for immunity, gut health, or whatever else -
             we’ve got you covered.
           </Text>

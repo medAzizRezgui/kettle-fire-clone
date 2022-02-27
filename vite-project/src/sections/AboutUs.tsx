@@ -24,6 +24,7 @@ const AboutUs = () => {
           variant={"primary"}
           display={{ base: "flex", lg: "none" }}
           mx={"auto"}
+          mt={"10px"}
         >
           About us
         </Button>

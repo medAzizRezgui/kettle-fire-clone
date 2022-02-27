@@ -9,7 +9,7 @@ const Benefit: React.FC<Props> = ({ img, text }) => {
   return (
     <HStack>
       <Image src={img} alt={"none"} width={"60px"} />
-      <Text fontWeight={"600"} fontSize={"md"}>
+      <Text fontWeight={"600"} fontSize={{ base: "sm", sm: "lg" }}>
         {text}
       </Text>
     </HStack>

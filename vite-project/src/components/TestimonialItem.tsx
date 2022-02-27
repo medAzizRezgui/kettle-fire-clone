@@ -14,7 +14,12 @@ const TestimonialItem: React.FC<Props> = ({ text, user }) => {
       <HStack spacing={"1px"} mb={"20px"}>
         {renderStars}
       </HStack>
-      <Heading variant={"title"} fontSize={"2xl"} px={"6"} lineHeight={"1.2"}>
+      <Heading
+        variant={"title"}
+        fontSize={{ base: "xl", sm: "2xl" }}
+        px={{ base: 2, md: 6 }}
+        lineHeight={"1.2"}
+      >
         {text}
       </Heading>
       <Text fontWeight={"500"}> - {user} </Text>

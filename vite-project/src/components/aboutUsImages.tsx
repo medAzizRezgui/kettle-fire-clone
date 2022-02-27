@@ -3,7 +3,7 @@ import { data } from "../data/aboutUsData";
 import { Image, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 const AboutUsImages = () => {
-  const slides = useBreakpointValue({ base: 1.5, lg: 3 });
+  const slides = useBreakpointValue({ base: 1.5, md: 3 });
   return (
     <Swiper slidesPerView={slides} spaceBetween={10}>
       {data.map((item, i) => (

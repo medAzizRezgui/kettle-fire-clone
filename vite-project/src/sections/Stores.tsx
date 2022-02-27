@@ -12,7 +12,11 @@ import { images } from "../data/storesData";
 const Stores = () => {
   return (
     <Container variant={"fluid"} pt={"50px"} mt={"50px"} bg={"brandCream"}>
-      <Heading variant={"title"} fontSize={"2xl"} mb={"25px"}>
+      <Heading
+        variant={"title"}
+        fontSize={{ base: "2xl", md: "3xl" }}
+        mb={"25px"}
+      >
         <span style={{ textDecoration: "underline" }}>Find Us</span> in Stores
       </Heading>
       <HStack width={"100%"} align={"center"} justifyContent={"space-around"}>

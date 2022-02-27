@@ -41,13 +41,23 @@ const data = [
 const Benefits = () => {
   return (
     <>
-      <Container variant={"fluid"} bg={"brandCream"} pb={"100px"}>
+      <Container variant={"fluid"} bg={"brandCream"} pb={"50px"}>
         <Image src={wave} alt="wave" h={"100%"} />
         <Container variant={"responsive"}>
-          <Heading variant={"title"} fontSize={"3xl"} px={4} my={6}>
+          <Heading
+            variant={"title"}
+            fontSize={{ base: "2xl", md: "3xl" }}
+            px={{ base: 2, sm: 4 }}
+            my={6}
+          >
             We make bone broth convenient, delicious, and nutritious.
           </Heading>
-          <Text textAlign={"center"} fontSize={"xl"} px={6} mb={8}>
+          <Text
+            textAlign={"center"}
+            fontSize={{ base: "md", md: "xl" }}
+            px={{ base: 2, md: 6 }}
+            mb={8}
+          >
             Why? Because bone broth makes everything better, including you.
           </Text>
           <VStack spacing={"1px"}>
@@ -69,6 +79,6 @@ const styles = {
   btn: {
     display: "flex",
     margin: "0px auto",
-    marginTop: "35px",
+    marginTop: "25px",
   },
 };

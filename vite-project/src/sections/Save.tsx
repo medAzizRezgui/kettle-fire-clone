@@ -38,19 +38,35 @@ const Save = () => {
       />
       <Container variant={"responsive"}>
         <VStack spacing={"10px"}>
-          <Heading variant={"title"} fontSize={"3xl"}>
+          <Heading variant={"title"} fontSize={{ base: "2xl", md: "3xl" }}>
             Subscribe and Save
           </Heading>
-          <Text fontWeight={"400"} textAlign={"center"} fontSize={"lg"}>
+          <Text
+            fontWeight={"400"}
+            textAlign={"center"}
+            fontSize={{ base: "md", sm: "xl" }}
+          >
             Up to 20% Off
           </Text>
-          <Text fontWeight={"400"} textAlign={"center"} fontSize={"lg"}>
+          <Text
+            fontWeight={"400"}
+            textAlign={"center"}
+            fontSize={{ base: "md", sm: "xl" }}
+          >
             Free shipping for 6+ Cartons
           </Text>
-          <Text fontWeight={"400"} textAlign={"center"} fontSize={"lg"}>
+          <Text
+            fontWeight={"400"}
+            textAlign={"center"}
+            fontSize={{ base: "md", sm: "xl" }}
+          >
             Delivers Monthly
           </Text>
-          <Text fontWeight={"400"} textAlign={"center"} fontSize={"lg"}>
+          <Text
+            fontWeight={"400"}
+            textAlign={"center"}
+            fontSize={{ base: "md", sm: "xl" }}
+          >
             No Commitment
           </Text>
         </VStack>
