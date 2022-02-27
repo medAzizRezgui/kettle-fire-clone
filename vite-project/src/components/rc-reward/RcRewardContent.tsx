@@ -2,6 +2,10 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import customStyles from "../../theme/customStyles.module.css";
 import img from "../../assets/images/rewardBg.svg";
+import RcRewardContent1 from "./RcRewardContent-1";
+import RcRewardContent2 from "./RcRewardContent-2";
+import RcRewardContent3 from "./RcRewardContent-3";
+import RcRewardContent4 from "./RcRewardContent-4";
 
 const RcRewardContent = () => {
   return (
@@ -15,24 +19,10 @@ const RcRewardContent = () => {
       bgSize={"cover"}
       bgRepeat={"no-repeat"}
     >
-      <Box
-        width={"90%"}
-        h={"250px"}
-        bg={"white"}
-        m={2}
-        borderRadius={"8px"}
-        boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}
-        transform={"translateY(-40px)"}
-      />
-      <Box
-        width={"90%"}
-        h={"250px"}
-        bg={"white"}
-        m={2}
-        borderRadius={"8px"}
-        boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}
-        transform={"translateY(-40px)"}
-      />
+      <RcRewardContent1 />
+      <RcRewardContent3 />
+      <RcRewardContent2 />
+      <RcRewardContent4 />
     </Box>
   );
 };

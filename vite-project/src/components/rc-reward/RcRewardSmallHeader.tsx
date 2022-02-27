@@ -12,7 +12,7 @@ const RcRewardSmallHeader: React.FC<Props> = ({ onScreen }) => {
       zIndex={onScreen ? -500 : 200}
     >
       <Heading p={4}>
-        <HStack w={"100%"} align={"center"}>
+        <HStack w={"100%"} align={"center"} spacing={"20px"}>
           <Image
             sx={onScreen ? styles.hidden : styles.visible}
             src={
