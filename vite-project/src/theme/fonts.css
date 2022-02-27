@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "sagona";
+  src: url("../assets/fonts/Sagona-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sagona";
+  src: url("../assets/fonts/Sagona-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sagona";
+  src: url("../assets/fonts/Sagona-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sagona";
+  src: url("../assets/fonts/Sagona-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "wayfx";
+  src: url("https://cdn.kettleandfire.com/f2ccdae1-29d8-47a8-aa77-c7fcb1ef0770/wayfx.eot");
+  src: url("https://cdn.kettleandfire.com/f2ccdae1-29d8-47a8-aa77-c7fcb1ef0770/wayfx.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.kettleandfire.com/8fbd8641-4045-4fd5-9935-1412ffd16a2a/wayfx.woff")
+      format("woff"),
+    url("https://cdn.kettleandfire.com/fda6e9b4-1c75-4ddb-a25a-33dc7fe881d8/wayfx.ttf")
+      format("truetype"),
+    url("https://cdn.kettleandfire.com/ea033e5a-0e1f-4342-94f1-875a1da9363f/wayfx.svg#wayfx")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "wfx-portal";
+  src: url("https://cdn.kettleandfire.com/1a6c8cf7-9dbf-4d79-81eb-1fbaf3bdadcd/wfxportal.eot");
+  src: url("https://cdn.kettleandfire.com/1a6c8cf7-9dbf-4d79-81eb-1fbaf3bdadcd/wfxportal.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.kettleandfire.com/e44b2d76-6102-48bf-be46-59a65747acf4/wfxportal.woff")
+      format("woff"),
+    url("https://cdn.kettleandfire.com/a830c342-fb0e-41ad-9a30-1220911e8f45/wfxportal.ttf")
+      format("truetype"),
+    url("https://cdn.kettleandfire.com/c5399d3e-471f-4146-9958-01c47fd178ff/wfxportal.svg#wfx-portal")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "wayfx" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="wfx-icon-"]:before,
+[class*=" wfx-icon-"]:before {
+  font-family: "wayfx" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="wfx-portal-icon-"]:before,
+[class*=" wfx-portal-icon-"]:before {
+  font-family: "wfx-portal" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wfx-portal-icon-orders:before {
+  content: "\65";
+}
+
+.wfx-portal-icon-address:before {
+  content: "\66";
+}
+
+.wfx-portal-icon-subscription:before {
+  content: "\6d";
+}
+
+.wfx-icon-kf-logo:before {
+  content: "\62";
+  font-size: 26px;
+}
+
+.wfx-icon-arrow-left:before {
+  content: "\63";
+}
+
+.wfx-icon-arrow-right:before {
+  content: "\64";
+}
+
+.wfx-icon-checkmark-a:before {
+  content: "\65";
+}
+
+.wfx-icon-question:before {
+  content: "\66";
+}
+
+.wfx-icon-refresh:before {
+  content: "\67";
+}
+
+.wfx-icon-present:before {
+  content: "\68";
+}
+
+.wfx-icon-plus:before {
+  content: "\69";
+}
+
+.wfx-icon-minus:before {
+  content: "\6a";
+}
+
+.wfx-icon-lock:before {
+  content: "\6b";
+}
+
+.wfx-icon-checkmark-b:before {
+  content: "\6c";
+}
+
+.wfx-icon-close-a:before {
+  content: "\6d";
+}
+
+.wfx-icon-barn:before {
+  content: "\6f";
+}
+
+.wfx-icon-pinterest:before {
+  content: "\70";
+}
+
+.wfx-icon-plus-circle:before {
+  content: "\72";
+}
+
+.wfx-icon-bubble-chat:before {
+  content: "\73";
+}
+
+.wfx-icon-cart:before {
+  content: "\74";
+}
+
+.wfx-icon-pot:before {
+  content: "\75";
+}
+
+.wfx-icon-questions:before {
+  content: "\76";
+}
+
+.wfx-icon-chevron-down:before {
+  content: "\78";
+}
+
+.wfx-icon-chevron-down-b:before {
+  content: "\79";
+}
+
+.wfx-icon-close-b:before {
+  content: "\7a";
+}
+
+.wfx-icon-search:before {
+  content: "\41";
+}
+
+.wfx-icon-recycle:before {
+  content: "\43";
+}
+
+.wfx-icon-facebook:before {
+  content: "\44";
+}
+
+.wfx-icon-fire:before {
+  content: "\45";
+}
+
+.wfx-icon-grass:before {
+  content: "\46";
+}
+
+.wfx-icon-instagram:before {
+  content: "\49";
+}
+
+.wfx-icon-wayfx-icon:before {
+  content: "\4a";
+}
+
+.wfx-icon-verified-checkmark:before {
+  content: "\4b";
+}
+
+.wfx-icon-twitter:before {
+  content: "\4c";
+}
+
+.wfx-icon-star-filled:before {
+  content: "\4d";
+}
+
+.wfx-icon-chevron-left:before {
+  content: "\61";
+}
+
+.wfx-icon-chevron-right:before {
+  content: "\6e";
+}
+
+.wfx-icon-filter:before {
+  content: "\71";
+}
+
+.wfx-icon-blog:before {
+  content: "\77";
+}
+
+.wfx-icon-flag:before {
+  content: "\42";
+}
+
+.wfx-icon-recipes:before {
+  content: "\47";
+}
+
+.wfx-icon-account:before {
+  content: "\48";
+}
+.icon-open {
+  transition: all 0.5s ease-in-out;
+  animation: open 0.5s forwards;
+}
+@keyframes open {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.icon-close {
+  transition: all 0.5s ease-in-out;
+  animation: close 0.4s forwards;
+}
+@keyframes close {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
