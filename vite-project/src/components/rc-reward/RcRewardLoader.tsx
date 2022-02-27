@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Spinner } from "@chakra-ui/react";
+import img from "../../assets/images/rewardBg.svg";
 
 const RcRewardLoader = () => {
   return (
     <Box
       sx={styles.loader}
-      bgImage={"url('/src/assets/images/rewardBg.svg')"}
+      bgImage={`url('${img}')`}
       bgPosition={"center"}
       bgSize={"cover"}
       bgRepeat={"no-repeat"}

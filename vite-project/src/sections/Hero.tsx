@@ -10,8 +10,8 @@ import {
 } from "@chakra-ui/react";
 import heroWave from "../assets/images/heroWave.svg";
 import heroImg from "../assets/images/heroImage.jpg";
-import RewardButton from "../components/RewardButton";
-import RcReward from "../components/RcReward";
+import RewardButton from "../components/rc-reward/RewardButton";
+import RcReward from "../components/rc-reward/RcReward";
 const Hero = () => {
   const [openReward, setOpenReward] = useState(false);
 

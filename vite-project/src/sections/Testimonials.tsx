@@ -1,5 +1,5 @@
 import React from "react";
-import TestimonialItem from "../components/TestimonialItem";
+import TestimonialItem from "../components/testimonial/TestimonialItem";
 import { Container, useBreakpointValue } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

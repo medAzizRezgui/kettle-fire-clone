@@ -2,7 +2,7 @@ import React from "react";
 import { Container, useDisclosure } from "@chakra-ui/react";
 
 import NavIcons from "../components/NavIcons";
-import RcAccordion from "../components/RcAccordion";
+import RcAccordion from "../components/rc-accordion/RcAccordion";
 import RcDrawer from "../components/RcDrawer";
 
 const NavigationBar = () => {

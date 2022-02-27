@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, VStack, HStack, Text } from "@chakra-ui/react";
 import { MdVerified } from "react-icons/md";
-import renderStars from "../components/TestiStars";
+import renderStars from "./TestiStars";
 
 type Props = {
   text: string;

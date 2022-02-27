@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Image, Text, VStack } from "@chakra-ui/react";
-import customStyles from "../theme/customStyles.module.css";
+import customStyles from "../../theme/customStyles.module.css";
 type Props = {
   height: number;
   refc: any;

@@ -4,17 +4,19 @@ type Props = {
   isOpen: boolean;
 };
 
-import customStyles from "../theme/customStyles.module.css";
-import { useOnScreen } from "./customHook";
+import customStyles from "../../theme/customStyles.module.css";
+import { useOnScreen } from "../utils/customHook";
 import RcRewardLoader from "./RcRewardLoader";
 import RcRewardSmallHeader from "./RcRewardSmallHeader";
 import RcRewardBigHeader from "./RcRewardBigHeader";
 import RcRewardContent from "./RcRewardContent";
 const RcReward: React.FC<Props> = ({ isOpen }) => {
   const [height, setHeight] = useState(0);
+
   const handleScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
     setHeight(e.currentTarget.scrollTop);
   };
+
   const ref: any = useRef<HTMLDivElement>();
   const rootMargin = useBreakpointValue({
     base: "-140px",

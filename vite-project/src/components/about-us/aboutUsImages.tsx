@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../data/aboutUsData";
+import { data } from "../../data/aboutUsData";
 import { Image, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 const AboutUsImages = () => {

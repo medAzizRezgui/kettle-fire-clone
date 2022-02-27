@@ -3,8 +3,8 @@ import { Button, Container, Image, Stack } from "@chakra-ui/react";
 
 import wave4 from "../assets/images/wave5.svg";
 
-import AboutUsText from "../components/AboutUsText";
-import AboutUsImages from "../components/aboutUsImages";
+import AboutUsText from "../components/about-us/AboutUsText";
+import AboutUsImages from "../components/about-us/aboutUsImages";
 const AboutUs = () => {
   return (
     <Container variant={"fluid"} position={"relative"}>
@@ -37,7 +37,7 @@ export default AboutUs;
 const styles = {
   wave: {
     position: "sticky",
-    zIndex: 500,
+    zIndex: 20,
     background: "brandCream",
   },
 };

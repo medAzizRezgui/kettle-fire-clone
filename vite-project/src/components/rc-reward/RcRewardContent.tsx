@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import customStyles from "../theme/customStyles.module.css";
+import customStyles from "../../theme/customStyles.module.css";
+import img from "../../assets/images/rewardBg.svg";
 
 const RcRewardContent = () => {
   return (
@@ -9,7 +10,7 @@ const RcRewardContent = () => {
       sx={styles.content}
       bg={"white"}
       className={customStyles.contentAnimation}
-      bgImage={"url('/src/assets/images/rewardBg.svg')"}
+      bgImage={`url('${img}')`}
       bgPosition={"center"}
       bgSize={"cover"}
       bgRepeat={"no-repeat"}

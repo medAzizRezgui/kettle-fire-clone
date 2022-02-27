@@ -1,5 +1,5 @@
 import React from "react";
-import customStyles from "../theme/customStyles.module.css";
+import customStyles from "../../theme/customStyles.module.css";
 import { Box, Heading, HStack, Image, Text } from "@chakra-ui/react";
 type Props = {
   onScreen: boolean;
