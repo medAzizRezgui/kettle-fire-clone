@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Container,
@@ -10,9 +10,16 @@ import {
 } from "@chakra-ui/react";
 import heroWave from "../assets/images/heroWave.svg";
 import heroImg from "../assets/images/heroImage.jpg";
+import RewardButton from "../components/RewardButton";
+import RcReward from "../components/RcReward";
 const Hero = () => {
+  const [openReward, setOpenReward] = useState(false);
+
   return (
     <>
+      <RewardButton isOpen={openReward} onOpen={setOpenReward} />
+      {openReward && <RcReward isOpen={openReward} />}
+
       <Container variant={"fluid"} mt={"60px"} bg={"heroBg"}>
         <Container variant={"responsive"}>
           <Stack
@@ -46,5 +53,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-const styles = {};

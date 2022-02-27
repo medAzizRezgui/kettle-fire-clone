@@ -1,0 +1,59 @@
+.rewardBody::-webkit-scrollbar {
+  display: none;
+}
+
+.rewardBody {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  animation: bodyGoUp 0.5s forwards;
+}
+.bigHeaderAnimation {
+  animation: slowPop 0.5s 0.9s forwards;
+}
+
+.smallHeaderAnimation {
+  animation: slowPop 0.5s 1.35s forwards;
+}
+.contentAnimation {
+  animation: slowPop 0.5s 1.3s forwards;
+}
+
+@keyframes comeNgo {
+  0% {
+    z-index: 500;
+    background: white;
+  }
+
+  99% {
+    background: white;
+    z-index: 500;
+  }
+  100% {
+    z-index: -500;
+    background: transparent;
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bodyGoUp {
+  0% {
+    transform: translate3d(0, 5%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slowPop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

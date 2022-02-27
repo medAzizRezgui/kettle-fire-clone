@@ -22,7 +22,6 @@ function App() {
       <AboutUs />
       <Testimonials />
       <Quiz />
-
       <Suspense fallback={<h1>Loading</h1>}>
         <Save />
         <Recipes />

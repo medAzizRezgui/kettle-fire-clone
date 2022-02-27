@@ -13,14 +13,14 @@ const NavigationBar = () => {
       top: "-60px",
       left: 0,
       width: "100%",
-      zIndex: 1500,
+      zIndex: 100,
     },
     fixed: {
       position: "fixed",
       top: 0,
       left: 0,
       width: "100%",
-      zIndex: 1500,
+      zIndex: 100,
     },
   };
   return (
