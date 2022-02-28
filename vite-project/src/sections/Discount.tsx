@@ -6,6 +6,7 @@ import {
   Input,
   Text,
   Button,
+  Stack,
   VStack,
 } from "@chakra-ui/react";
 
@@ -13,18 +14,26 @@ const Discount = () => {
   return (
     <Container variant="fluid" bg="yellow" py={"60px"}>
       <Container variant={"responsive"}>
-        <VStack spacing={"10px"}>
-          <Heading sx={styles.title}>
-            Take an extra 10% off your first order{" "}
-          </Heading>
-          <Text sx={styles.subTitle}>
-            We’ll also send you delicious recipes, product updates, and more
-          </Text>
+        <Stack
+          spacing={"10px"}
+          direction={{ base: "column", xl: "row" }}
+          align={"center"}
+          justify={"space-around"}
+        >
+          <VStack>
+            <Heading sx={styles.title}>
+              Take an extra 10% off your first order{" "}
+            </Heading>
+            <Text sx={styles.subTitle}>
+              We’ll also send you delicious recipes, product updates, and more
+            </Text>
+          </VStack>
+
           <Box sx={styles.email}>
             <Input type="email" placeholder="Your email" sx={styles.input} />
             <Button sx={styles.promo}>Get promo</Button>
           </Box>
-        </VStack>
+        </Stack>
       </Container>
     </Container>
   );

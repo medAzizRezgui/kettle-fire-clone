@@ -31,6 +31,6 @@ const styles = {
     textAlign: "center",
   },
   itemImage: {
-    maxWidth: "200px",
+    maxWidth: { base: "200px", xl: "250px" },
   },
 };

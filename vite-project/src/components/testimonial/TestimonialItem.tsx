@@ -10,7 +10,7 @@ type Props = {
 
 const TestimonialItem: React.FC<Props> = ({ text, user }) => {
   return (
-    <VStack spacing={"15px"} mb={"30px"}>
+    <VStack spacing={"15px"} mb={"40px"}>
       <HStack spacing={"1px"} mb={"20px"}>
         {renderStars}
       </HStack>

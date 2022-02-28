@@ -6,6 +6,7 @@ import AboutUs from "./sections/AboutUs";
 import Testimonials from "./sections/Testimonials";
 import Quiz from "./sections/Quiz";
 import React, { Suspense } from "react";
+import { Spinner } from "@chakra-ui/react";
 
 const Save = React.lazy(() => import("./sections/Save"));
 const Recipes = React.lazy(() => import("./sections/Recipes"));
@@ -22,7 +23,7 @@ function App() {
       <AboutUs />
       <Testimonials />
       <Quiz />
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<Spinner />}>
         <Save />
         <Recipes />
         <RcGrid />

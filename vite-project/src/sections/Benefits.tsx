@@ -1,43 +1,17 @@
 import React from "react";
 import {
-  Box,
   Button,
   Container,
   Heading,
   Image,
+  Stack,
   Text,
-  VStack,
 } from "@chakra-ui/react";
-import bone from "../assets/images/bone.png";
-import gut from "../assets/images/gut.png";
-import imm from "../assets/images/imm.png";
-import fire from "../assets/images/fire.png";
-import weight from "../assets/images/weight.png";
+
 import wave from "../assets/images/wave3.svg";
 
 import Benefit from "../components/Benefit";
-const data = [
-  {
-    image: bone,
-    text: "Joint Mobility & Recovery",
-  },
-  {
-    image: gut,
-    text: "Digestion & Gut Health",
-  },
-  {
-    image: imm,
-    text: "Immune Function",
-  },
-  {
-    image: fire,
-    text: "Anti-Inflammatory Responses",
-  },
-  {
-    image: weight,
-    text: "  Weight Management",
-  },
-];
+import { data } from "../data/benefitsData";
 const Benefits = () => {
   return (
     <>
@@ -46,8 +20,8 @@ const Benefits = () => {
         <Container variant={"responsive"}>
           <Heading
             variant={"title"}
-            fontSize={{ base: "2xl", md: "3xl" }}
-            px={{ base: 2, sm: 4 }}
+            fontSize={{ base: "2xl", md: "4xl" }}
+            px={{ base: 2, sm: 4, xl: 64 }}
             my={6}
           >
             We make bone broth convenient, delicious, and nutritious.
@@ -60,11 +34,15 @@ const Benefits = () => {
           >
             Why? Because bone broth makes everything better, including you.
           </Text>
-          <VStack spacing={"1px"}>
+          <Stack
+            direction={{ base: "column", xl: "row" }}
+            spacing={"1px"}
+            mb={{ xl: "50px" }}
+          >
             {data.map((item, i) => (
               <Benefit key={i} text={item.text} img={item.image} />
             ))}
-          </VStack>
+          </Stack>
           <Button variant={"primary"} sx={styles.btn}>
             Shop now
           </Button>

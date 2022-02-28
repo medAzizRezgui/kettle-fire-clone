@@ -5,12 +5,12 @@ const AboutUsText = () => {
   return (
     <VStack
       maxW={{ lg: "30%" }}
-      spacing={"20px"}
+      spacing={{ base: "20px", xl: "35px" }}
       px={{ base: "20px", md: "0px" }}
     >
       <Heading
         variant={"title"}
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: "2xl", md: "3xl", xl: "4xl" }}
         px={{ base: 2, sm: 4 }}
       >
         At Kettle & Fire, we're not just making good food.

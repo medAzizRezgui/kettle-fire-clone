@@ -29,11 +29,11 @@ const Hero = () => {
             spacing={"16px"}
             pt={"10"}
           >
-            <VStack spacing={"20px"}>
-              <Heading variant={"title"}>
+            <VStack spacing={{ base: "20px", xl: "30px" }}>
+              <Heading variant={"title"} fontSize={{ xl: "5xl" }}>
                 Better Bone Broth for Better Living
               </Heading>
-              <Text textAlign={"center"} fontSize={"xl"}>
+              <Text textAlign={"center"} fontSize={{ base: "xl", xl: "2xl" }}>
                 All-in-one shippable wellness to support health and happiness.
               </Text>
               <Button variant={"primary"}>learn more</Button>
@@ -42,7 +42,7 @@ const Hero = () => {
               src={heroImg}
               alt={"hero"}
               loading={"eager"}
-              maxW={{ base: "100%", md: "55%", lg: "55%" }}
+              maxW={{ base: "100%", md: "55%", lg: "55%", xl: "60%" }}
             />
           </Stack>
         </Container>

@@ -7,22 +7,6 @@ import RcDrawer from "../components/RcDrawer";
 
 const NavigationBar = () => {
   const { isOpen, onToggle } = useDisclosure();
-  const styles = {
-    absolute: {
-      position: "absolute",
-      top: "-60px",
-      left: 0,
-      width: "100%",
-      zIndex: 100,
-    },
-    fixed: {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100%",
-      zIndex: 100,
-    },
-  };
   return (
     <Container
       variant={"fluid"}
@@ -41,3 +25,19 @@ const NavigationBar = () => {
 };
 
 export default NavigationBar;
+const styles = {
+  absolute: {
+    position: "absolute",
+    top: "-60px",
+    left: 0,
+    width: "100%",
+    zIndex: 100,
+  },
+  fixed: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    zIndex: 100,
+  },
+};

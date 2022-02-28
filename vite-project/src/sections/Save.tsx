@@ -21,60 +21,61 @@ const Save = () => {
     md: wave2,
   });
   return (
-    <Container
-      variant={"fluid"}
-      bg={{ base: "darkBrown", md: "gray" }}
-      display={{ md: "flex" }}
-      alignItems={{ md: "center" }}
-      flexDirection={{ md: "row-reverse" }}
-      pb={{ md: "20px" }}
-    >
-      <Image
-        src={shop}
-        alt={"girl"}
-        maxW={{ md: "400px" }}
-        borderRadius={{ md: "20px" }}
-        m={{ md: "20px" }}
-      />
-      <Container variant={"responsive"}>
-        <VStack spacing={"10px"}>
-          <Heading variant={"title"} fontSize={{ base: "2xl", md: "3xl" }}>
-            Subscribe and Save
-          </Heading>
-          <Text
-            fontWeight={"400"}
-            textAlign={"center"}
-            fontSize={{ base: "md", sm: "xl" }}
-          >
-            Up to 20% Off
-          </Text>
-          <Text
-            fontWeight={"400"}
-            textAlign={"center"}
-            fontSize={{ base: "md", sm: "xl" }}
-          >
-            Free shipping for 6+ Cartons
-          </Text>
-          <Text
-            fontWeight={"400"}
-            textAlign={"center"}
-            fontSize={{ base: "md", sm: "xl" }}
-          >
-            Delivers Monthly
-          </Text>
-          <Text
-            fontWeight={"400"}
-            textAlign={"center"}
-            fontSize={{ base: "md", sm: "xl" }}
-          >
-            No Commitment
-          </Text>
-        </VStack>
-        <Button variant={"primary"} m={"20px auto"} display={"flex"}>
-          Shop Now
-        </Button>
+    <Container variant={"fluid"} bg={{ base: "darkBrown", md: "gray" }}>
+      <Container
+        variant={"fluid"}
+        display={{ md: "flex" }}
+        alignItems={{ md: "center" }}
+        flexDirection={{ md: "row-reverse" }}
+        pb={{ md: "20px" }}
+      >
+        <Image
+          src={shop}
+          alt={"girl"}
+          maxW={{ md: "400px" }}
+          borderRadius={{ md: "20px" }}
+          m={{ md: "20px" }}
+        />
+        <Container variant={"responsive"}>
+          <VStack spacing={"10px"}>
+            <Heading variant={"title"} fontSize={{ base: "2xl", md: "3xl" }}>
+              Subscribe and Save
+            </Heading>
+            <Text
+              fontWeight={"400"}
+              textAlign={"center"}
+              fontSize={{ base: "md", sm: "xl" }}
+            >
+              Up to 20% Off
+            </Text>
+            <Text
+              fontWeight={"400"}
+              textAlign={"center"}
+              fontSize={{ base: "md", sm: "xl" }}
+            >
+              Free shipping for 6+ Cartons
+            </Text>
+            <Text
+              fontWeight={"400"}
+              textAlign={"center"}
+              fontSize={{ base: "md", sm: "xl" }}
+            >
+              Delivers Monthly
+            </Text>
+            <Text
+              fontWeight={"400"}
+              textAlign={"center"}
+              fontSize={{ base: "md", sm: "xl" }}
+            >
+              No Commitment
+            </Text>
+          </VStack>
+          <Button variant={"primary"} m={"20px auto"} display={"flex"}>
+            Shop Now
+          </Button>
+        </Container>
+        <Image src={waveSrc} alt={"wave"} sx={waveStyle} />
       </Container>
-      <Image src={waveSrc} alt={"wave"} sx={waveStyle} />
     </Container>
   );
 };

@@ -11,6 +11,10 @@ const data = [
     text: "“This a fantastic bone broth. It tastes great when making soup, stews, gravy... really anything.”",
   },
   {
+    user: "Paula L",
+    text: "Just after 2 days I feel that I have more energy. The lower sodium is best for me. I love this product of Kettle & Fire.",
+  },
+  {
     user: "Steph D",
     text: "“I use the bone broth in multiple recipes. It gives a richness everyone notices.”",
   },
@@ -24,9 +28,9 @@ const data = [
   },
 ];
 const Testimonials = () => {
-  const slidePerView = useBreakpointValue({ base: 1, md: 2 });
+  const slidePerView = useBreakpointValue({ base: 1, md: 2, xl: 3 });
   return (
-    <Container variant={"responsive"} my={"40px"}>
+    <Container variant={"responsive"} my={"80px"}>
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={50}

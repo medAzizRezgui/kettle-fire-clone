@@ -5,13 +5,18 @@ import {
   Grid,
   GridItem,
   Image,
-  Tag,
   HStack,
 } from "@chakra-ui/react";
 import { images } from "../data/storesData";
 const Stores = () => {
   return (
-    <Container variant={"fluid"} pt={"50px"} mt={"50px"} bg={"brandCream"}>
+    <Container
+      variant={"fluid"}
+      pt={"50px"}
+      py={"70px"}
+      mt={"30px"}
+      bg={"brandCream"}
+    >
       <Heading
         variant={"title"}
         fontSize={{ base: "2xl", md: "3xl" }}

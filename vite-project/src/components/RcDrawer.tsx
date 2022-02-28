@@ -5,7 +5,11 @@ type Props = {
 };
 const RcDrawer: React.FC<Props> = ({ children, isOpen }) => {
   return (
-    <Box sx={styles.drawer} h={isOpen ? "100vh" : "0px"}>
+    <Box
+      sx={styles.drawer}
+      h={isOpen ? "100vh" : "0px"}
+      display={{ xl: "none" }}
+    >
       {children}
     </Box>
   );

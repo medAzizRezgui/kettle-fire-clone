@@ -68,9 +68,9 @@ const theme = extendTheme({
       variants: {
         primary: {
           display: "inline-flex",
-          px: 12,
-          py: 6,
-          fontSize: "sm",
+          px: { base: 12, xl: 16 },
+          py: { base: 6, xl: 8 },
+          fontSize: { base: "sm", xl: "lg" },
           background: "primary",
           color: "white",
           fontFamily: "montserrat",

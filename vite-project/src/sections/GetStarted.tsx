@@ -38,17 +38,17 @@ const styles = {
     color: "brandDark",
     fontWeight: 500,
     textDecoration: "underline",
-    fontSize: "md",
+    fontSize: { base: "md", xl: "xl" },
   },
   title: {
     textAlign: "center",
     color: "#000000",
-    fontSize: "2xl",
+    fontSize: { base: "xl", xl: "3xl" },
     fontWeight: 600,
-    mb: "5",
+    mb: "10",
   },
   itemImage: {
-    maxWidth: "200px",
+    maxWidth: { base: "220px", md: "250px", xl: "270px" },
     transition: "all 0.2s ease-in-out",
     _hover: {
       transform: "scale(1.1)",
