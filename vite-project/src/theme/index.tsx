@@ -90,8 +90,16 @@ const theme = extendTheme({
           textAlign: "center",
           color: "brandDark",
           lineHeight: 1.2,
+
           fontWeight: 600,
           fontSize: "4xl",
+        },
+      },
+    },
+    Text: {
+      variants: {
+        span: {
+          display: "inline",
         },
       },
     },
