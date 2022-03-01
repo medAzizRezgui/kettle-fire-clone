@@ -4,7 +4,6 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  background,
   Heading,
   HStack,
 } from "@chakra-ui/react";

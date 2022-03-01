@@ -6,7 +6,7 @@ import {
   Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
-
+import { Link } from "react-router-dom";
 import TextWithIcon from "../Layout/nav-icons/textWithIcon";
 import "../../theme/fonts.css";
 import Logo from "../../assets/images/logo-kf.svg";
@@ -46,10 +46,11 @@ const NavIcons: React.FC<Props> = ({ onToggle, isOpen }) => {
           />
         </HStack>
         {/*Logo*/}
-
-        <HStack align={"center"} display={{ xl: "none" }}>
-          <span className="wfx-icon-kf-logo">{""}</span>
-        </HStack>
+        <Link to={"/home"}>
+          <HStack align={"center"} display={{ xl: "none" }}>
+            <span className="wfx-icon-kf-logo">{""}</span>
+          </HStack>
+        </Link>
 
         <Image
           src={Logo}
@@ -76,7 +77,7 @@ const NavIcons: React.FC<Props> = ({ onToggle, isOpen }) => {
     </>
   );
 };
-
+// TODO : Make react router scroll to top
 export default NavIcons;
 const styles = {
   navText: {
