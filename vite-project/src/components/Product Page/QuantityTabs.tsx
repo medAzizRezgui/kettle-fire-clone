@@ -1,6 +1,7 @@
 import React from "react";
 import { HStack, TabList, Tabs } from "@chakra-ui/react";
 import QuantityTab from "./QuantityTab";
+
 const data = [
   {
     price: 7.99,
@@ -19,9 +20,17 @@ const data = [
     packs: "18-Pack",
   },
 ];
-const QuantityTabs = () => {
+type Props = {
+  handleChange: (index: number) => void;
+};
+const QuantityTabs: React.FC<Props> = ({ handleChange }) => {
   return (
-    <Tabs w={"100%"} variant="unstyled" mt={"30px"}>
+    <Tabs
+      w={"100%"}
+      variant="unstyled"
+      mt={"30px"}
+      onChange={(e) => handleChange(e)}
+    >
       <TabList display={"flex"}>
         <HStack align={"center"} justify={"space-between"} w={"100%"}>
           {data.map((item, i) => (

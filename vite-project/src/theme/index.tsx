@@ -33,6 +33,7 @@ const theme = extendTheme({
     darkPink: "#D6C3B9",
     yellow: "#FAB944",
     darkBrown: "#DCA15B",
+    brown: "#694400",
     brandDark: "#2B1A1A",
     brandCream: "#FFF9EE",
     black: "#000000",

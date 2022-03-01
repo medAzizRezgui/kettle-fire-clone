@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Text, VStack } from "@chakra-ui/react";
 import { whiten } from "@chakra-ui/theme-tools";
+
 type Props = {
   price: number;
   packs: string;
@@ -9,7 +10,7 @@ const QuantityTab: React.FC<Props> = ({ price, packs }) => {
   const CustomTab: React.FC = ({ children }) => (
     <Tab
       cursor="pointer"
-      borderWidth="2px"
+      borderWidth="1px"
       borderRadius="md"
       boxShadow="md"
       py={"2px"}

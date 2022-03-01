@@ -1,20 +1,37 @@
-import React from "react";
-import {
-  Box,
-  Container,
-  Heading,
-  HStack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Container, useDisclosure } from "@chakra-ui/react";
 
-import renderStars from "../../components/Home Page/testimonial/TestiStars";
 import OrderOptions from "../../components/Product Page/OrderOptions";
 import QuantityTabs from "../../components/Product Page/QuantityTabs";
 import AddToCartButton from "../../components/Product Page/AddToCartButton";
+import ProductText from "../../components/Product Page/ProductText";
+import ProductReviews from "../../components/Product Page/ProductReviews";
+
+// TODO : create images thumbnails
 const Product = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const PRICE = 7.99;
+
+  const [price, setPrice] = useState(PRICE);
+  const handleChange = (e: number) => {
+    switch (e) {
+      case (e = 0):
+        return setPrice(PRICE);
+      case (e = 1):
+        // code block
+        return setPrice(PRICE * 6);
+      case (e = 2):
+        // code block
+        return setPrice(PRICE * 11);
+      case (e = 3):
+        // code block
+        return setPrice(PRICE * 16);
+      default:
+      // code block
+    }
+  };
   return (
-    <Container variant={"fluid"} mt={"60px"}>
+    <Container variant={"fluid"} my={"60px"}>
       {/* Product Image*/}
       <Box
         h={"320px"}
@@ -27,29 +44,20 @@ const Product = () => {
       {/*-------------*/}
       <Container variant={"responsive"} px={"30px"}>
         {/*Reviews*/}
-        <HStack my={"20px"} spacing={"12px"}>
-          <HStack spacing={"1px"}>{renderStars("#aa131d", "20px")}</HStack>
-          <Text textDecoration={"underline"} fontWeight={500}>
-            7859 Reviews
-          </Text>
-        </HStack>
+        <ProductReviews />
         {/*  Product Text*/}
-        <VStack align={"left"}>
-          <Heading variant={"title"} fontSize={"3xl"} textAlign={"left"}>
-            Chicken Bone Broth
-          </Heading>
-          <Text fontWeight={500}>
-            A comforting classic made with organic, free-range chicken that
-            soothes with every serving. Easy to heat, easy to sip, easy to feel
-            better fast.
-          </Text>
-        </VStack>
-
+        <ProductText />
         {/*Ordering Options  */}
-        <OrderOptions />
+        <OrderOptions
+          price={price}
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onClose}
+        />
         {/*  Quantity*/}
-        <QuantityTabs />
-        <AddToCartButton />
+        <QuantityTabs handleChange={handleChange} />
+        {/*Cart Button*/}
+        <AddToCartButton price={price} isOpen={isOpen} />
       </Container>
     </Container>
   );

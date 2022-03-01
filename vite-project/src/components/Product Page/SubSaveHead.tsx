@@ -3,8 +3,9 @@ import { Circle, Heading, HStack } from "@chakra-ui/react";
 type Props = {
   onClose: () => void;
   isOpen: boolean;
+  price: number;
 };
-const SubSaveHead: React.FC<Props> = ({ isOpen, onClose }) => {
+const SubSaveHead: React.FC<Props> = ({ isOpen, onClose, price }) => {
   return (
     <HStack onClick={() => onClose()} cursor={"pointer"}>
       <Circle border={"2px solid"} borderColor={"primary"} size={"30px"}>
@@ -22,7 +23,7 @@ const SubSaveHead: React.FC<Props> = ({ isOpen, onClose }) => {
           fontSize={"20px"}
           sx={!isOpen ? styles.activeText : styles.disabledText}
         >
-          & Save $2.20
+          & Save ${(price / 4).toFixed(2)}
         </Heading>
       </HStack>
     </HStack>
