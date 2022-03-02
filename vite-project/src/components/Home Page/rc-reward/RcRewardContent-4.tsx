@@ -27,14 +27,14 @@ const RcRewardContent4 = () => {
 
         <Accordion allowMultiple w={"100%"}>
           <RcRewardAccItem img={b1}>
-            <VStack align={"start"} spacing={"0px"}>
-              <Text fontSize={"14px"}>Getting Warm - Silver</Text>
+            <VStack align={"start"} spacing={"0px"} w={"100%"}>
+              <Text fontSize={"13px"}>Getting Warm-Silver</Text>
               <Text fontSize={"12px"}>Spend $0</Text>
             </VStack>
           </RcRewardAccItem>
           <RcRewardAccItem img={b2}>
             <VStack align={"start"} spacing={"0px"}>
-              <Text fontSize={"14px"}>Getting Warm - Gold</Text>
+              <Text fontSize={"14px"}>Firing Up-Gold</Text>
               <Text fontSize={"12px"}>Spend $300</Text>
             </VStack>
           </RcRewardAccItem>

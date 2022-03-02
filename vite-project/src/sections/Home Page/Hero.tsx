@@ -51,5 +51,5 @@ const Hero = () => {
     </>
   );
 };
-// TODO : add reward button
+
 export default Hero;

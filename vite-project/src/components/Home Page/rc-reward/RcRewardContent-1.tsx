@@ -14,7 +14,12 @@ const RcRewardContent1 = () => {
       transform={"translateY(-40px)"}
     >
       <VStack align={"center"} spacing={"20px"}>
-        <Text fontFamily={"Poppins"} fontSize={"sm"} fontWeight={600}>
+        <Text
+          fontFamily={"Poppins"}
+          textAlign={"center"}
+          fontSize={"sm"}
+          fontWeight={600}
+        >
           Join our very hot rewards program!
         </Text>
         <Text fontSize={"13px"} textAlign={"center"} px={"10px"}>

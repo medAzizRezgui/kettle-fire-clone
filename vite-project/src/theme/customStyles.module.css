@@ -1,7 +1,12 @@
 .rewardBody::-webkit-scrollbar {
   display: none;
 }
-
+.animReward {
+  animation: animReward 0.5s;
+}
+.animRewardRev {
+  animation: animRewarda 0.5s;
+}
 .rewardBody {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -17,7 +22,22 @@
 .contentAnimation {
   animation: slowPop 0.5s 1.3s forwards;
 }
-
+@keyframes animReward {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animRewarda {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes comeNgo {
   0% {
     z-index: 500;

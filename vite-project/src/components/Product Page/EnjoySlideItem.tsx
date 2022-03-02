@@ -3,12 +3,14 @@ import { Heading, Image, VStack } from "@chakra-ui/react";
 type Props = {
   src: string;
   isActive: boolean;
-  text: string;
+  text?: string;
+  mb?: string;
 };
-const EnjoySlideItem: React.FC<Props> = ({ src, isActive, text }) => {
+const EnjoySlideItem: React.FC<Props> = ({ src, mb, isActive, text }) => {
   return (
-    <VStack py={"40px"} spacing={"20px"}>
+    <VStack mb={mb}>
       <Image
+        loading={"lazy"}
         boxShadow={"md"}
         borderRadius={"12px"}
         opacity={isActive ? 1 : 0.3}

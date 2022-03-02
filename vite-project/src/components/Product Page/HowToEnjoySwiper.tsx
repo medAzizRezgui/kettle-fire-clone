@@ -14,6 +14,7 @@ const HowToEnjoySwiper = () => {
       <SwiperSlide>
         {({ isActive }) => (
           <EnjoySlideItem
+            mb={"60px"}
             text={"Early Morning Wake-Up"}
             isActive={isActive}
             src={

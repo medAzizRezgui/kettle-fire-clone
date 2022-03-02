@@ -31,7 +31,7 @@ const RcReward: React.FC<Props> = ({ isOpen }) => {
       onScroll={(e) => {
         handleScroll(e);
       }}
-      h={isOpen ? "550px" : "0px"}
+      h={isOpen ? "500px" : "0px"}
       w={{ base: "85%", sm: "350px" }}
       sx={styles.rewardBody}
       className={customStyles.rewardBody}

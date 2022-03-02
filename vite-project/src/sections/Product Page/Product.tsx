@@ -6,8 +6,8 @@ import QuantityTabs from "../../components/Product Page/QuantityTabs";
 import AddToCartButton from "../../components/Product Page/AddToCartButton";
 import ProductText from "../../components/Product Page/ProductText";
 import ProductReviews from "../../components/Product Page/ProductReviews";
+import ImageThumbs from "../../components/Product Page/ImageThumbs";
 
-// TODO : create images thumbnails
 const Product = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const PRICE = 7.99;
@@ -18,16 +18,12 @@ const Product = () => {
       case (e = 0):
         return setPrice(PRICE);
       case (e = 1):
-        // code block
         return setPrice(PRICE * 6);
       case (e = 2):
-        // code block
         return setPrice(PRICE * 11);
       case (e = 3):
-        // code block
         return setPrice(PRICE * 16);
       default:
-      // code block
     }
   };
   return (
@@ -43,6 +39,8 @@ const Product = () => {
       {/*  Product Info*/}
       {/*-------------*/}
       <Container variant={"responsive"} px={"30px"}>
+        {/*Grid Images*/}
+        <ImageThumbs />
         {/*Reviews*/}
         <ProductReviews />
         {/*  Product Text*/}

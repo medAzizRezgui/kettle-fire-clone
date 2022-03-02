@@ -14,7 +14,12 @@ const RcRewardContent3 = () => {
       transform={"translateY(-40px)"}
     >
       <VStack align={"center"} spacing={"20px"}>
-        <Text fontFamily={"Poppins"} fontSize={"sm"} fontWeight={600}>
+        <Text
+          fontFamily={"Poppins"}
+          fontSize={"sm"}
+          fontWeight={600}
+          textAlign={"center"}
+        >
           Give $10, Get $10 For Referring Friends
         </Text>
         <Text fontSize={"13px"} textAlign={"center"} px={"10px"}>

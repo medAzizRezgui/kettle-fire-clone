@@ -1,21 +1,30 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Circle, Icon } from "@chakra-ui/react";
+import CustomStyles from "../../../theme/customStyles.module.css";
+import { AiFillGift } from "react-icons/ai";
 type Props = {
   onOpen: (state: boolean) => void;
   isOpen: boolean;
 };
+
 const RewardButton: React.FC<Props> = ({ onOpen, isOpen }) => {
   return (
-    <Box
-      h={"50px"}
-      w={"50px"}
+    <Circle
+      cursor={"pointer"}
+      size={"50px"}
       bg={"primary"}
-      borderRadius={"full"}
       sx={styles.button}
       onClick={() => onOpen(!isOpen)}
     >
-      {""}
-    </Box>
+      <Icon
+        as={AiFillGift}
+        boxSize={"24px"}
+        color={"white"}
+        className={
+          isOpen ? CustomStyles.animReward : CustomStyles.animRewardRev
+        }
+      />
+    </Circle>
   );
 };
 
@@ -26,5 +35,6 @@ const styles = {
     zIndex: 9999,
     bottom: "25px",
     left: "25px",
+    animation: "rotate infinite ",
   },
 };

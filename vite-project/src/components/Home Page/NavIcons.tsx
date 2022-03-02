@@ -77,7 +77,7 @@ const NavIcons: React.FC<Props> = ({ onToggle, isOpen }) => {
     </>
   );
 };
-// TODO : Make react router scroll to top
+
 export default NavIcons;
 const styles = {
   navText: {

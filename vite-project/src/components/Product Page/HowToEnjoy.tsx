@@ -12,7 +12,7 @@ const HowToEnjoy = () => {
       {/*Accordion*/}
       <HowToEnjoyAccordion />
       {/*Text Info*/}
-      <VStack spacing={"20px"} pt={"40px"}>
+      <VStack spacing={"20px"} pt={"40px"} mb={"30px"}>
         <Image src={Pot} />
         <Heading fontSize={"2xl"}>How To Enjoy</Heading>
         <Text textAlign={"center"}>
