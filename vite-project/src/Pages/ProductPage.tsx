@@ -5,6 +5,7 @@ import ProductProps from "../sections/Product Page/ProductProps";
 import ScrollToTopOnMount from "../components/utils/ScrollToTop";
 import RewardButton from "../components/Home Page/rc-reward/RewardButton";
 import RcReward from "../components/Home Page/rc-reward/RcReward";
+import ScrollTopSmoothBtn from "../components/ScrollTopSmoothBtn";
 const PageProduct = () => {
   const [openReward, setOpenReward] = useState(false);
 
@@ -16,6 +17,7 @@ const PageProduct = () => {
 
       <Product />
       <ProductProps />
+      <ScrollTopSmoothBtn />
     </Layout>
   );
 };
