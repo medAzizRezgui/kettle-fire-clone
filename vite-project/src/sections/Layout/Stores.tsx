@@ -7,7 +7,7 @@ import {
   Image,
   HStack,
 } from "@chakra-ui/react";
-import { images } from "../../data/storesData";
+import { images } from "../../assets/data/storesData";
 const Stores = () => {
   return (
     <Container variant={"fluid"} pt={"50px"} py={"70px"} bg={"brandCream"}>

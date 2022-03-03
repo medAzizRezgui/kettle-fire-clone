@@ -1,6 +1,6 @@
-import img1 from "../assets/images/recipe1.jpg";
-import img2 from "../assets/images/recipe3.jpg";
-import img3 from "../assets/images/recipe2.jpg";
+import img1 from "../images/recipe1.jpg";
+import img2 from "../images/recipe3.jpg";
+import img3 from "../images/recipe2.jpg";
 
 export const data = [
   {

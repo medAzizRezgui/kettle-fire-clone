@@ -7,7 +7,7 @@ import Quiz from "../sections/Home Page/Quiz";
 import React, { Suspense } from "react";
 import { Spinner } from "@chakra-ui/react";
 import Layout from "../sections/Layout/Layout";
-import ScrollTopSmoothBtn from "../components/ScrollTopSmoothBtn";
+import ScrollTopSmoothBtn from "../components/Layout/ScrollTopSmoothBtn";
 
 const Save = React.lazy(() => import("../sections/Home Page/Save"));
 const Recipes = React.lazy(() => import("../sections/Home Page/Recipes"));

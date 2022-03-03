@@ -10,9 +10,7 @@ import {
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { data } from "../../data/getStartedData";
-
-import "swiper/css";
+import { data } from "../../assets/data/getStartedData";
 
 const GetStarted = () => {
   const slides = useBreakpointValue({ base: 1.5, md: 3, lg: 4 });

@@ -17,6 +17,7 @@ const Quiz = () => {
         display={{ md: "flex" }}
         alignItems={{ md: "center" }}
       >
+        {/*Image at top*/}
         <Image
           loading={"lazy"}
           src={girl}
@@ -27,6 +28,7 @@ const Quiz = () => {
         />
         <Container variant={"responsive"}>
           <VStack spacing={{ base: "15px", md: "25px" }}>
+            {/*Text*/}
             <Heading
               variant={"title"}
               fontSize={{ base: "2xl", md: "3xl" }}
@@ -44,6 +46,7 @@ const Quiz = () => {
               - we’ve got you covered.
             </Text>
           </VStack>
+          {/*Button*/}
           <Button variant={"primary"} m={"20px auto"} display={"flex"}>
             Take the quiz
           </Button>

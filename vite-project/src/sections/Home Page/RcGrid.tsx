@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Heading, Grid, GridItem, Image } from "@chakra-ui/react";
-import { images } from "../../data/rcGridData";
+import { images } from "../../assets/data/rcGridData";
 
 const RcGrid = () => {
   return (

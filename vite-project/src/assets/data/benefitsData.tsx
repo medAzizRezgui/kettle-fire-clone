@@ -1,8 +1,8 @@
-import bone from "../assets/images/bone.png";
-import gut from "../assets/images/gut.png";
-import imm from "../assets/images/imm.png";
-import fire from "../assets/images/fire.png";
-import weight from "../assets/images/weight.png";
+import bone from "../images/bone.png";
+import gut from "../images/gut.png";
+import imm from "../images/imm.png";
+import fire from "../images/fire.png";
+import weight from "../images/weight.png";
 
 export const data = [
   {

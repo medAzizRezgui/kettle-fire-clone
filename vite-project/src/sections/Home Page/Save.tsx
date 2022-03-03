@@ -8,6 +8,12 @@ import {
   Button,
   useBreakpointValue,
 } from "@chakra-ui/react";
+const data = [
+  "Up to 20% Off",
+  "Free shipping for 6+ Cartons",
+  "Delivers Monthly",
+  "No Commitment",
+];
 import shop from "../../assets/images/shop.jpg";
 import wave from "../../assets/images/wave6.svg";
 import wave2 from "../../assets/images/wave7.svg";
@@ -31,7 +37,7 @@ const Save = () => {
       >
         <Image
           src={shop}
-          alt={"girl"}
+          alt={"shopItem"}
           maxW={{ md: "400px" }}
           borderRadius={{ md: "20px" }}
           m={{ md: "20px" }}
@@ -41,34 +47,17 @@ const Save = () => {
             <Heading variant={"title"} fontSize={{ base: "2xl", md: "3xl" }}>
               Subscribe and Save
             </Heading>
-            <Text
-              fontWeight={"400"}
-              textAlign={"center"}
-              fontSize={{ base: "md", sm: "xl" }}
-            >
-              Up to 20% Off
-            </Text>
-            <Text
-              fontWeight={"400"}
-              textAlign={"center"}
-              fontSize={{ base: "md", sm: "xl" }}
-            >
-              Free shipping for 6+ Cartons
-            </Text>
-            <Text
-              fontWeight={"400"}
-              textAlign={"center"}
-              fontSize={{ base: "md", sm: "xl" }}
-            >
-              Delivers Monthly
-            </Text>
-            <Text
-              fontWeight={"400"}
-              textAlign={"center"}
-              fontSize={{ base: "md", sm: "xl" }}
-            >
-              No Commitment
-            </Text>
+
+            {data.map((item, key) => (
+              <Text
+                key={key}
+                fontWeight={"400"}
+                textAlign={"center"}
+                fontSize={{ base: "md", sm: "xl" }}
+              >
+                {item}
+              </Text>
+            ))}
           </VStack>
           <Button variant={"primary"} m={"20px auto"} display={"flex"}>
             Shop Now

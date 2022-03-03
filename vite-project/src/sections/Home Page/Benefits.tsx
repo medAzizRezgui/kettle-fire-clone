@@ -10,8 +10,8 @@ import {
 
 import wave from "../../assets/images/wave3.svg";
 
-import Benefit from "../../components/Home Page/Benefit";
-import { data } from "../../data/benefitsData";
+import BenefitsItem from "../../components/Home Page/BenefitsItem";
+import { data } from "../../assets/data/benefitsData";
 const Benefits = () => {
   return (
     <>
@@ -40,7 +40,7 @@ const Benefits = () => {
             mb={{ xl: "50px" }}
           >
             {data.map((item, i) => (
-              <Benefit key={i} text={item.text} img={item.image} />
+              <BenefitsItem key={i} text={item.text} img={item.image} />
             ))}
           </Stack>
           <Button variant={"primary"} sx={styles.btn}>

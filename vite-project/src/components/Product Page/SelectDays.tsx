@@ -42,7 +42,7 @@ const SelectDays = () => {
     </HStack>
   );
 };
-// TODO : Make dropdown icons works
+
 export default SelectDays;
 const styles = {
   innerInput: {

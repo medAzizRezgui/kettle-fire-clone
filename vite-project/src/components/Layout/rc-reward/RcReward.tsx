@@ -5,7 +5,7 @@ type Props = {
 };
 
 import customStyles from "../../../theme/customStyles.module.css";
-import { useOnScreen } from "../../utils/customHook";
+import { useOnScreen } from "../../../utils/customHook";
 import RcRewardLoader from "./RcRewardLoader";
 import RcRewardSmallHeader from "./RcRewardSmallHeader";
 import RcRewardBigHeader from "./RcRewardBigHeader";
@@ -24,7 +24,7 @@ const RcReward: React.FC<Props> = ({ isOpen }) => {
     md: "-200px",
     lg: "-200px",
   });
-  const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, rootMargin); //180px
+  const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, rootMargin);
 
   return (
     <Box

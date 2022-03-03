@@ -4,7 +4,7 @@ type Props = {
   text: string;
   img: any;
 };
-const Benefit: React.FC<Props> = ({ img, text }) => {
+const BenefitsItem: React.FC<Props> = ({ img, text }) => {
   return (
     <Stack
       direction={{ base: "row", xl: "column" }}
@@ -24,4 +24,4 @@ const Benefit: React.FC<Props> = ({ img, text }) => {
   );
 };
 
-export default Benefit;
+export default BenefitsItem;

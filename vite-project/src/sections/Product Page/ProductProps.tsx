@@ -5,7 +5,6 @@ import ProductNutriments from "../../components/Product Page/ProductNutriments";
 import HowToEnjoy from "../../components/Product Page/HowToEnjoy";
 import Testimonials from "../Home Page/Testimonials";
 import GirlWithCup from "../../components/Product Page/GirlWithCup";
-import AlsoLove from "../../components/Product Page/AlsoLove";
 const ProductProps = () => {
   return (
     <>
@@ -19,7 +18,6 @@ const ProductProps = () => {
         </Container>
         <GirlWithCup />
       </Container>
-      <AlsoLove />
     </>
   );
 };

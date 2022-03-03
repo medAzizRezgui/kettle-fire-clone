@@ -7,15 +7,15 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import TextWithIcon from "../Layout/nav-icons/textWithIcon";
-import "../../theme/fonts.css";
-import Logo from "../../assets/images/logo-kf.svg";
+import TextWithIcon from "../nav-icons/textWithIcon";
+import "../../../theme/fonts.css";
+import Logo from "../../../assets/images/logo-kf.svg";
 import {
   HiOutlineSearch,
   HiOutlineUser,
   HiOutlineShoppingCart,
 } from "react-icons/hi";
-import SideBarButtons from "../Layout/nav-icons/sideBarButtons";
+import SideBarButtons from "../nav-icons/sideBarButtons";
 type Props = {
   onToggle: () => void;
   isOpen: boolean;

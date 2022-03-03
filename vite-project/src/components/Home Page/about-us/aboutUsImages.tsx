@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../../../data/aboutUsData";
+import { data } from "../../../assets/data/aboutUsData";
 import { Image, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 const AboutUsImages = () => {
@@ -8,7 +8,11 @@ const AboutUsImages = () => {
     <Swiper slidesPerView={slides} spaceBetween={10}>
       {data.map((item, i) => (
         <SwiperSlide key={i}>
-          <VStack width={"100%"} align={"center"}>
+          <VStack
+            maxW={{ base: "220px", xl: "250px" }}
+            align={"center"}
+            mx={"30px"}
+          >
             <Image
               loading={"lazy"}
               src={item.image}

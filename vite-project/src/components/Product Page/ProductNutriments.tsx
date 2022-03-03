@@ -9,7 +9,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-import { data } from "../../data/productNutrimentsData";
+import { data } from "../../assets/data/productNutrimentsData";
 const ProductNutriments = () => {
   return (
     <VStack w={"100%"} spacing={"50px"}>

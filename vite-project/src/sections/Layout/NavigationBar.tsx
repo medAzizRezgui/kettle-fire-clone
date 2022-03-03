@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, useDisclosure } from "@chakra-ui/react";
-import NavIcons from "../../components/Home Page/NavIcons";
+import NavIcons from "../../components/Layout/nav-icons/NavIcons";
 import RcAccordion from "../../components/Home Page/rc-accordion/RcAccordion";
 import RcDrawer from "../../components/Layout/RcDrawer";
 

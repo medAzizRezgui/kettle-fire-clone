@@ -6,7 +6,7 @@ type Props = {
   bg: string;
   color: string;
 };
-const Recipe: React.FC<Props> = ({ text, img, bg, color }) => {
+const RecipeItem: React.FC<Props> = ({ text, img, bg, color }) => {
   return (
     <Container
       variant={"responsive"}
@@ -43,7 +43,7 @@ const Recipe: React.FC<Props> = ({ text, img, bg, color }) => {
   );
 };
 
-export default Recipe;
+export default RecipeItem;
 const styles = {
   text: {
     transition: "0.9s all ease-in-out",

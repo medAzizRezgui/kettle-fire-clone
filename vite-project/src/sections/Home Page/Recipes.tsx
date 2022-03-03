@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css/pagination";
-import Recipe from "../../components/Home Page/Recipe";
-import { data } from "../../data/recipesData";
+import RecipeItem from "../../components/Home Page/RecipeItem";
+import { data } from "../../assets/data/recipesData";
 const Recipes = () => {
   const slides = useBreakpointValue({ base: 1, md: 2 });
   return (
@@ -23,7 +23,7 @@ const Recipes = () => {
         >
           {data.map((item, i) => (
             <SwiperSlide key={i}>
-              <Recipe
+              <RecipeItem
                 color={item.color}
                 bg={item.bg}
                 text={item.text}

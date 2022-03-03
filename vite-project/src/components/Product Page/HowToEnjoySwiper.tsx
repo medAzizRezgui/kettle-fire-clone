@@ -2,7 +2,7 @@ import React from "react";
 import EnjoySlideItem from "./EnjoySlideItem";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import "swiper/css";
 const HowToEnjoySwiper = () => {
   return (
     <Swiper
