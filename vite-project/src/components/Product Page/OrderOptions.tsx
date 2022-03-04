@@ -12,7 +12,7 @@ type Props = {
 };
 const OrderOptions: React.FC<Props> = ({ price, onClose, isOpen, onOpen }) => {
   return (
-    <VStack align={"start"}>
+    <VStack align={"start"} w={"100%"}>
       <VStack align={"start"} spacing={"10px"} my={"20px"}>
         <SubSaveHead onClose={onClose} isOpen={isOpen} price={price} />
         {!isOpen && (

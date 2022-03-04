@@ -9,7 +9,7 @@ const ProductProps = () => {
   return (
     <>
       <Container sx={styles.containerBg} variant={"fluid"}>
-        <Container variant={"responsive"} pt={"70px"}>
+        <Container variant={"responsive"}>
           <ProductNutriments />
           <HowToEnjoy />
         </Container>

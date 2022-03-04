@@ -4,7 +4,11 @@ import { Heading, Text, VStack } from "@chakra-ui/react";
 const ProductText = () => {
   return (
     <VStack align={"left"}>
-      <Heading variant={"title"} fontSize={"3xl"} textAlign={"left"}>
+      <Heading
+        variant={"title"}
+        fontSize={{ base: "2xl", sm: "3xl" }}
+        textAlign={"left"}
+      >
         Chicken Bone Broth
       </Heading>
       <Text fontWeight={500}>

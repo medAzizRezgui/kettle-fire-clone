@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 import { darken } from "@chakra-ui/theme-tools";
-
+type Props = {
+  question?: boolean;
+};
 const data = [
   {
     title: "Use case:",
@@ -16,9 +18,14 @@ const data = [
     desc: "Afternoon / Evening",
   },
 ];
-const ReviewUsecase = () => {
+const ReviewUsecase: React.FC<Props> = ({ question }) => {
   return (
-    <Box sx={styles.useCaseBox} px={3} py={6}>
+    <Box
+      display={question ? "none" : "block"}
+      sx={styles.useCaseBox}
+      px={3}
+      py={6}
+    >
       <VStack align={"start"}>
         {data.map((item, key) => (
           <HStack key={key} spacing={"10px"}>

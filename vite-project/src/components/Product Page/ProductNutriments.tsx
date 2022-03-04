@@ -7,13 +7,20 @@ import {
   Wrap,
   WrapItem,
   Image,
+  Stack,
 } from "@chakra-ui/react";
 
 import { data } from "../../assets/data/productNutrimentsData";
+import HowToEnjoyAccordion from "./HowToEnjoyAccordion";
 const ProductNutriments = () => {
   return (
     <VStack w={"100%"} spacing={"50px"}>
-      <HStack justify={"space-around"} w={"100%"}>
+      <HStack
+        justify={{ base: "space-around", md: "center" }}
+        spacing={{ md: "40px" }}
+        w={"100%"}
+        pt={"60px"}
+      >
         <VStack>
           <Text fontSize={"13px"} fontWeight={600}>
             PROTEIN
@@ -33,7 +40,7 @@ const ProductNutriments = () => {
           <Heading fontSize={"3xl"}>4g</Heading>
         </VStack>
       </HStack>
-      <Wrap justify={"space-around"} spacing={"30px"}>
+      <Wrap justify={"center"} spacing={"30px"}>
         {data.map((item) => (
           <WrapItem key={item.text}>
             <VStack>
@@ -46,12 +53,20 @@ const ProductNutriments = () => {
         ))}
       </Wrap>
 
-      <Image
-        maxW={"200px"}
-        src={
-          "https://ucarecdn.com/0b2b0461-4f8e-4b73-8e7d-e2711bbb6085/-/format/auto/-/quality/lighter/-/max_icc_size/10/-/resize/684x/"
-        }
-      />
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        justify={{ base: "center", md: "space-between" }}
+        align={"center"}
+        spacing={"30px"}
+      >
+        <Image
+          maxW={{ base: "200px", md: "250px" }}
+          src={
+            "https://ucarecdn.com/0b2b0461-4f8e-4b73-8e7d-e2711bbb6085/-/format/auto/-/quality/lighter/-/max_icc_size/10/-/resize/684x/"
+          }
+        />
+        <HowToEnjoyAccordion />
+      </Stack>
     </VStack>
   );
 };

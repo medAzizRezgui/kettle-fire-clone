@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack, TabList, Tabs } from "@chakra-ui/react";
+import { TabList, Tabs, Grid, GridItem } from "@chakra-ui/react";
 import QuantityTab from "./QuantityTab";
 
 const data = [
@@ -31,12 +31,18 @@ const QuantityTabs: React.FC<Props> = ({ handleChange }) => {
       mt={"30px"}
       onChange={(e) => handleChange(e)}
     >
-      <TabList display={"flex"}>
-        <HStack align={"center"} justify={"space-between"} w={"100%"}>
+      <TabList>
+        <Grid
+          templateColumns={{ base: "repeat(2,1fr)", sm: "repeat(4,1fr)" }}
+          w={"100%"}
+          gap={2}
+        >
           {data.map((item, i) => (
-            <QuantityTab key={i} price={item.price} packs={item.packs} />
+            <GridItem w={"100%"}>
+              <QuantityTab key={i} price={item.price} packs={item.packs} />
+            </GridItem>
           ))}
-        </HStack>
+        </Grid>
       </TabList>
     </Tabs>
   );

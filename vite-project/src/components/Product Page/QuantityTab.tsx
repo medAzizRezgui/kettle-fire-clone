@@ -13,8 +13,8 @@ const QuantityTab: React.FC<Props> = ({ price, packs }) => {
       borderWidth="1px"
       borderRadius="md"
       boxShadow="md"
-      py={"2px"}
-      px={"10px"}
+      p={0}
+      w={"100%"}
       _selected={{
         bg: whiten("primary", 90),
         color: "black",
@@ -30,7 +30,7 @@ const QuantityTab: React.FC<Props> = ({ price, packs }) => {
   return (
     <CustomTab>
       <VStack spacing={"1px"}>
-        <Text fontWeight={600} fontSize={"12px"}>
+        <Text fontWeight={600} fontSize={"12px"} px={2}>
           {packs}
         </Text>
         <Text fontSize="12px" fontWeight={600}>

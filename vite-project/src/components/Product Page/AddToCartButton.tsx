@@ -11,11 +11,17 @@ const AddToCartButton: React.FC<Props> = ({ price, isOpen }) => {
     <Button sx={styles.cartBtn}>
       <HStack justify={"center"} align={"center"}>
         {isOpen ? (
-          <Text>$ {price}</Text>
+          <Text fontSize={{ base: "16px", sm: "16px" }}>$ {price}</Text>
         ) : (
           <>
-            <Text>${(price - price / 4).toFixed(2)}</Text>
-            <Text textDecoration={"line-through"} opacity={0.4}>
+            <Text fontSize={{ base: "12px", sm: "16px" }}>
+              ${(price - price / 4).toFixed(2)}
+            </Text>
+            <Text
+              textDecoration={"line-through"}
+              opacity={0.4}
+              fontSize={{ base: "12px", sm: "16px" }}
+            >
               {" "}
               ${price}
             </Text>
@@ -24,7 +30,7 @@ const AddToCartButton: React.FC<Props> = ({ price, isOpen }) => {
         <Text fontWeight="300" opacity={0.8}>
           |
         </Text>
-        <Text>ADD TO CART </Text>
+        <Text fontSize={{ base: "12px", sm: "16px" }}>ADD TO CART </Text>
       </HStack>
     </Button>
   );

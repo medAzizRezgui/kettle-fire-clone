@@ -9,7 +9,10 @@ function CustomGridModal(props: {
   onClick4: () => void;
 }) {
   return (
-    <Grid templateColumns="repeat(5, 1fr)" gap={2}>
+    <Grid
+      templateColumns={{ base: "repeat(5,1fr)", sm: "repeat(3,1fr)" }}
+      gap={2}
+    >
       <ThumbGridITem
         onClick={props.onClick}
         src={

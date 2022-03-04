@@ -41,10 +41,9 @@ const ReviewsBody = () => {
           <Text>7073 Reviews</Text>
           <ReviewItem />
           <ReviewItem />
-          <ReviewItem />
         </TabPanel>
         <TabPanel>
-          <p>two!</p>
+          <ReviewItem question={true} />
         </TabPanel>
       </TabPanels>
     </Tabs>

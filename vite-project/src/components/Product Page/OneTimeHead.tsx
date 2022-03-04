@@ -11,7 +11,7 @@ const OneTimeHead: React.FC<Props> = ({ onOpen, isOpen }) => {
         <Circle size={"24px"} sx={isOpen ? styles.active : styles.disabled} />
       </Circle>
       <Heading
-        fontSize={"20px"}
+        fontSize={{ base: "18px", sm: "24px" }}
         sx={isOpen ? styles.activeText : styles.disabledText}
       >
         One-time Order

@@ -1,7 +1,11 @@
 import { Box, Circle, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import renderStars from "../../components/Home Page/testimonial/TestiStars";
 import { MdVerified } from "react-icons/md";
-const UserBadge = () => {
+type Props = {
+  question?: boolean;
+};
+
+const UserBadge: React.FC<Props> = ({ question }) => {
   return (
     <>
       <HStack spacing={"10px"} justify={"start"} my={"20px"}>
@@ -31,7 +35,9 @@ const UserBadge = () => {
               Verified Buyer
             </Text>
           </HStack>
-          <HStack spacing={0}>{renderStars("#aa131d", "16px")}</HStack>
+          <HStack display={question ? "none" : "flex"} spacing={0}>
+            {renderStars("#aa131d", "16px")}
+          </HStack>
         </VStack>
       </HStack>
     </>

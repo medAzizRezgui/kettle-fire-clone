@@ -12,8 +12,7 @@ const ThumbGridItem: React.FC<Props> = ({ src, onClick }) => {
       boxShadow={"md"}
       bgSize={"cover"}
       bgImage={`url('${src}')`}
-      w="50px"
-      h="50px"
+      boxSize={{ base: "60px", sm: "80px", md: "120px" }}
       onClick={() => onClick()}
     />
   );

@@ -13,14 +13,14 @@ const SubSaveHead: React.FC<Props> = ({ isOpen, onClose, price }) => {
       </Circle>
       <HStack spacing={"8px"}>
         <Heading
-          fontSize={"20px"}
+          fontSize={{ base: "18px", sm: "24px" }}
           sx={!isOpen ? styles.activeText : styles.disabledText}
         >
           Subscribe
         </Heading>
         <Heading
           color="primary"
-          fontSize={"20px"}
+          fontSize={{ base: "18px", sm: "24px" }}
           sx={!isOpen ? styles.activeText : styles.disabledText}
         >
           & Save ${(price / 4).toFixed(2)}

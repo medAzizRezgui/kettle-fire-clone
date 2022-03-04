@@ -8,6 +8,7 @@ import RcReward from "../components/Layout/rc-reward/RcReward";
 import ScrollTopSmoothBtn from "../components/Layout/ScrollTopSmoothBtn";
 import Reviews from "../sections/Product Page/Reviews";
 import AlsoLove from "../components/Product Page/AlsoLove";
+import NotSure from "../sections/Product Page/NotSure";
 const PageProduct = () => {
   const [openReward, setOpenReward] = useState(false);
 
@@ -19,7 +20,9 @@ const PageProduct = () => {
       <Product />
       <ProductProps />
       <Reviews />
+      <NotSure />
       <AlsoLove />
+
       <ScrollTopSmoothBtn />
     </Layout>
   );

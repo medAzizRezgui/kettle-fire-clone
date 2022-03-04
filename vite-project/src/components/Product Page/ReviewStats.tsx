@@ -14,8 +14,12 @@ const ReviewStats = () => {
         </VStack>
       </HStack>
       <HStack spacing={"20px"} my={"20px"}>
-        <Button variant={"outline"}>Write a Question</Button>
-        <Button variant={"outline"}>Write a Review</Button>
+        <Button fontSize={{ base: "14px", sm: "16px" }} variant={"outline"}>
+          Write a Question
+        </Button>
+        <Button fontSize={{ base: "14px", sm: "16px" }} variant={"outline"}>
+          Write a Review
+        </Button>
       </HStack>
     </>
   );
