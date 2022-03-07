@@ -38,8 +38,8 @@ const QuantityTabs: React.FC<Props> = ({ handleChange }) => {
           gap={2}
         >
           {data.map((item, i) => (
-            <GridItem w={"100%"}>
-              <QuantityTab key={i} price={item.price} packs={item.packs} />
+            <GridItem w={"100%"} key={i}>
+              <QuantityTab price={item.price} packs={item.packs} />
             </GridItem>
           ))}
         </Grid>

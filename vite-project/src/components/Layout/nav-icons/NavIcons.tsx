@@ -71,7 +71,9 @@ const NavIcons: React.FC<Props> = ({ onToggle, isOpen }) => {
             display={{ base: "none", xl: "block" }}
           />
           <HiOutlineUser size={iconSize} />
-          <HiOutlineShoppingCart size={iconSize} />
+          <Link to={"/cart"}>
+            <HiOutlineShoppingCart size={iconSize} />
+          </Link>
         </HStack>
       </HStack>
     </>

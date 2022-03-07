@@ -5,7 +5,7 @@ type Props = {
 };
 
 import customStyles from "../../../theme/customStyles.module.css";
-import { useOnScreen } from "../../../utils/customHook";
+import { useOnScreen } from "../../../utils/Hooks/customHook";
 import RcRewardLoader from "./RcRewardLoader";
 import RcRewardSmallHeader from "./RcRewardSmallHeader";
 import RcRewardBigHeader from "./RcRewardBigHeader";

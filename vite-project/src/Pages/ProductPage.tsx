@@ -1,29 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import Layout from "../sections/Layout/Layout";
 import Product from "../sections/Product Page/Product";
 import ProductProps from "../sections/Product Page/ProductProps";
-import ScrollToTopOnMount from "../utils/ScrollToTop";
-import RewardButton from "../components/Layout/rc-reward/RewardButton";
-import RcReward from "../components/Layout/rc-reward/RcReward";
-import ScrollTopSmoothBtn from "../components/Layout/ScrollTopSmoothBtn";
-import Reviews from "../sections/Product Page/Reviews";
-import AlsoLove from "../components/Product Page/AlsoLove";
-import NotSure from "../sections/Product Page/NotSure";
+import { Spinner } from "@chakra-ui/react";
+
+const NotSure = lazy(() => import("../sections/Product Page/Reviews"));
+const Reviews = lazy(() => import("../sections/Product Page/NotSure"));
+const AlsoLove = lazy(() => import("../components/Product Page/AlsoLove"));
+const ScrollToTopOnMount = lazy(() => import("../utils/ScrollToTop"));
+const ScrollTopSmoothBtn = lazy(
+  () => import("../components/Layout/ScrollTopSmoothBtn")
+);
+const RewardButton = lazy(
+  () => import("../components/Layout/rc-reward/RewardButton")
+);
+
+const RcReward = lazy(() => import("../components/Layout/rc-reward/RcReward"));
+
 const PageProduct = () => {
   const [openReward, setOpenReward] = useState(false);
 
   return (
     <Layout>
-      <ScrollToTopOnMount />
-      <RewardButton isOpen={openReward} onOpen={setOpenReward} />
-      {openReward && <RcReward isOpen={openReward} />}
+      <Suspense fallback={<Spinner />}>
+        <ScrollToTopOnMount />
+        <RewardButton isOpen={openReward} onOpen={setOpenReward} />
+        {openReward && <RcReward isOpen={openReward} />}
+      </Suspense>
       <Product />
       <ProductProps />
-      <Reviews />
-      <NotSure />
-      <AlsoLove />
 
-      <ScrollTopSmoothBtn />
+      <Suspense fallback={<Spinner />}>
+        <Reviews />
+        <NotSure />
+        <AlsoLove />
+        <ScrollTopSmoothBtn />
+      </Suspense>
     </Layout>
   );
 };
