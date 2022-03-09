@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, HStack, Text } from "@chakra-ui/react";
 import { darken } from "@chakra-ui/theme-tools";
-import useCart from "../../utils/Hooks/useCart";
+
+import { useCounter } from "../../context/Cart/CartState";
 
 type Props = {
   price: number;
   isOpen: boolean;
+  productName: string;
 };
 
-const AddToCartButton: React.FC<Props> = ({ price, isOpen }) => {
-  const [finalPrice, setFinalPrice] = useState();
-  const { setPrice } = useCart();
-  const handlePrice = () => {
-    isOpen ? setFinalPrice(price) : setFinalPrice(price - price / 4).toFixed(2);
-    setPrice((prev) => [...prev, finalPrice]);
-  };
+const AddToCartButton: React.FC<Props> = ({ price, isOpen, productName }) => {
+  const { addItem } = useCounter();
 
+  const a = { name: productName, amount: 8, id: 2, price: price };
   return (
-    <Button sx={styles.cartBtn} onClick={handlePrice}>
+    <Button sx={styles.cartBtn} onClick={() => addItem(a)}>
       <HStack justify={"center"} align={"center"}>
         {isOpen ? (
           <Text fontSize={{ base: "16px", sm: "16px" }}>$ {price}</Text>
