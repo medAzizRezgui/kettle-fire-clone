@@ -4,17 +4,18 @@ import SubSaveHead from "./SubSaveHead";
 import SelectDays from "./SelectDays";
 import FeaturesList from "./FeaturesList";
 import OneTimeHead from "./OneTimeHead";
+import React from "react";
+import { useCounter } from "../../context/Cart/CartState";
 type Props = {
   price: number;
-  onClose: () => void;
-  isOpen: boolean;
-  onOpen: () => void;
 };
-const OrderOptions: React.FC<Props> = ({ price, onClose, isOpen, onOpen }) => {
+
+const OrderOptions: React.FC<Props> = ({ price }) => {
+  const { isOpen, onOpen } = useCounter();
   return (
     <VStack align={"start"} w={"100%"}>
       <VStack align={"start"} spacing={"10px"} my={"20px"}>
-        <SubSaveHead onClose={onClose} isOpen={isOpen} price={price} />
+        <SubSaveHead price={price} />
         {!isOpen && (
           <Box px={"10px"}>
             <VStack spacing={"20px"}>

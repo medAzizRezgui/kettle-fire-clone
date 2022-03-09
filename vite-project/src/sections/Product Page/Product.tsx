@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Container,
-  useDisclosure,
   useBreakpointValue,
   Flex,
   VStack,
@@ -19,7 +18,6 @@ const Product = () => {
     base: "https://ucarecdn.com/2fc05d89-17cf-4d37-86ce-c2bae68f1ad5/ChickenBoneBroth16ozMobile.jpg",
     md: "https://ucarecdn.com/b8234127-73ae-4c5a-861d-904e3e38aaf1/4PackChickenBoneBroth32oz.jpg",
   });
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const PRICE = 7.99;
 
   const [price, setPrice] = useState(PRICE);
@@ -30,9 +28,9 @@ const Product = () => {
       case (e = 1):
         return setPrice(PRICE * 6);
       case (e = 2):
-        return setPrice(PRICE * 11);
+        return setPrice(PRICE * 12);
       case (e = 3):
-        return setPrice(PRICE * 16);
+        return setPrice(PRICE * 18);
       default:
     }
   };
@@ -62,20 +60,11 @@ const Product = () => {
             {/*  Product Text*/}
             <ProductText />
             {/*Ordering Options  */}
-            <OrderOptions
-              price={price}
-              isOpen={isOpen}
-              onOpen={onOpen}
-              onClose={onClose}
-            />
+            <OrderOptions price={price} />
             {/*  Quantity*/}
             <QuantityTabs handleChange={handleChange} />
             {/*Cart Button*/}
-            <AddToCartButton
-              price={price}
-              isOpen={isOpen}
-              productName={"Cold Ice"}
-            />
+            <AddToCartButton price={price} productName={"Cold Ice"} />
           </VStack>
         </Container>
       </Flex>

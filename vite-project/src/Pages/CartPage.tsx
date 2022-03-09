@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { useCounter } from "../context/Cart/CartState";
 
 const CartPage = () => {
-  const { cartItems, delItem } = useCounter();
+  const { cartItems, handleRemoveFromCart, handleRemoveAllFromCart, isOpen } =
+    useCounter();
   return (
     <Layout>
       <Container variant={"fluid"} mt="60px">
@@ -17,9 +18,16 @@ const CartPage = () => {
           {cartItems.map((item, i) => (
             <HStack key={i}>
               <Heading>name : {item.name}</Heading>
-              <Text>price : {item.price}</Text>
+              <Text>
+                price : $ {(item.amount * (isOpen ? 7.99 : 5.99)).toFixed(2)}
+              </Text>
               <Text>amount :{item.amount}</Text>
-              <button onClick={() => delItem(item.id)}>Delete</button>
+              <button onClick={() => handleRemoveFromCart(item.id)}>
+                Delete 1 item
+              </button>
+              <button onClick={() => handleRemoveAllFromCart(item.id)}>
+                Delete all
+              </button>
             </HStack>
           ))}
         </Container>

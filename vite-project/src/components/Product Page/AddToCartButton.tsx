@@ -6,16 +6,34 @@ import { useCounter } from "../../context/Cart/CartState";
 
 type Props = {
   price: number;
-  isOpen: boolean;
+
   productName: string;
 };
 
-const AddToCartButton: React.FC<Props> = ({ price, isOpen, productName }) => {
-  const { addItem } = useCounter();
+const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
+  const { handleAddToCart, isOpen } = useCounter();
 
-  const a = { name: productName, amount: 8, id: 2, price: price };
+  const CalcFinalPrice = (price: number): number => {
+    if (!isOpen) {
+      return Number((price - price / 4).toFixed(2));
+    }
+    return price;
+  };
+  const CalcAmount = (): number => {
+    if (!isOpen) {
+      return Math.round(CalcFinalPrice(price) / 5.99);
+    }
+    return Math.round(CalcFinalPrice(price) / 7.99);
+  };
+  const item = {
+    name: productName,
+    amount: CalcAmount(),
+    id: 1,
+    price: CalcFinalPrice(price),
+  };
+
   return (
-    <Button sx={styles.cartBtn} onClick={() => addItem(a)}>
+    <Button sx={styles.cartBtn} onClick={() => handleAddToCart(item)}>
       <HStack justify={"center"} align={"center"}>
         {isOpen ? (
           <Text fontSize={{ base: "16px", sm: "16px" }}>$ {price}</Text>

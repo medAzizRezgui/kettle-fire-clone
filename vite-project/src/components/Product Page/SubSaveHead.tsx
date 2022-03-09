@@ -1,11 +1,11 @@
 import React from "react";
 import { Circle, Heading, HStack } from "@chakra-ui/react";
+import { useCounter } from "../../context/Cart/CartState";
 type Props = {
-  onClose: () => void;
-  isOpen: boolean;
   price: number;
 };
-const SubSaveHead: React.FC<Props> = ({ isOpen, onClose, price }) => {
+const SubSaveHead: React.FC<Props> = ({ price }) => {
+  const { onClose, isOpen } = useCounter();
   return (
     <HStack onClick={() => onClose()} cursor={"pointer"}>
       <Circle border={"2px solid"} borderColor={"primary"} size={"30px"}>
@@ -14,7 +14,7 @@ const SubSaveHead: React.FC<Props> = ({ isOpen, onClose, price }) => {
       <HStack spacing={"8px"}>
         <Heading
           fontSize={{ base: "18px", sm: "24px" }}
-          sx={!isOpen ? styles.activeText : styles.disabledText}
+          sx={isOpen ? styles.activeText : styles.disabledText}
         >
           Subscribe
         </Heading>
