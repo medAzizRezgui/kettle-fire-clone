@@ -2,11 +2,11 @@ import React from "react";
 import Layout from "../sections/Layout/Layout";
 import { Container, Heading, Text, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { useCounter } from "../context/Cart/CartState";
+import { useCartContext } from "../context/Cart/CartState";
 
 const CartPage = () => {
   const { cartItems, handleRemoveFromCart, handleRemoveAllFromCart, isOpen } =
-    useCounter();
+    useCartContext();
   return (
     <Layout>
       <Container variant={"fluid"} mt="60px">

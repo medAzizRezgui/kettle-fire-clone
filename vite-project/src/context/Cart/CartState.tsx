@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import React, { createContext, useContext, useState } from "react";
+
 import { useDisclosure } from "@chakra-ui/react";
 export type CartItem = {
   name: string;
@@ -22,10 +23,6 @@ export type Action = {
   payload?: any;
 };
 
-export type Dispatch = (action: Action) => void;
-
-const defaultValue = { cartItem: [] as CartItem[] };
-export type State = typeof defaultValue;
 const CartContext = createContext<CartItemContextType>(
   {} as CartItemContextType
 );
@@ -33,6 +30,8 @@ const CartContext = createContext<CartItemContextType>(
 export function CounterProvider({ children }: { children: ReactNode }) {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  // Handle Adding an Item to the cart
   const handleAddToCart = (clickedItem: CartItem) => {
     setCartItems((prev) => {
       // 1. Is the item already in cart ?
@@ -48,6 +47,8 @@ export function CounterProvider({ children }: { children: ReactNode }) {
       return [...prev, { ...clickedItem, amount: clickedItem.amount }];
     });
   };
+
+  // Handle Deleting an item from the cart
   const handleRemoveFromCart = (id: number): void => {
     setCartItems((prev) =>
       prev.reduce((acc, item) => {
@@ -60,6 +61,8 @@ export function CounterProvider({ children }: { children: ReactNode }) {
       }, [] as CartItem[])
     );
   };
+
+  // Handle deleting all items with a chosen id
   const handleRemoveAllFromCart = (id: number): void => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
@@ -80,6 +83,6 @@ export function CounterProvider({ children }: { children: ReactNode }) {
     </CartContext.Provider>
   );
 }
-export const useCounter = () => {
+export const useCartContext = () => {
   return useContext(CartContext);
 };

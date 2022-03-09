@@ -2,7 +2,7 @@ import React from "react";
 import { Button, HStack, Text } from "@chakra-ui/react";
 import { darken } from "@chakra-ui/theme-tools";
 
-import { useCounter } from "../../context/Cart/CartState";
+import { useCartContext } from "../../context/Cart/CartState";
 
 type Props = {
   price: number;
@@ -11,7 +11,7 @@ type Props = {
 };
 
 const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
-  const { handleAddToCart, isOpen } = useCounter();
+  const { handleAddToCart, isOpen } = useCartContext();
 
   const CalcFinalPrice = (price: number): number => {
     if (!isOpen) {
