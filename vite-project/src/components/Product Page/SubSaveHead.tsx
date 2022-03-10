@@ -1,10 +1,12 @@
 import React from "react";
 import { Circle, Heading, HStack } from "@chakra-ui/react";
 import { useCartContext } from "../../context/Cart/CartState";
+import { PRICE } from "../../context/Cart/CartState";
+
 type Props = {
-  price: number;
+  amount: number;
 };
-const SubSaveHead: React.FC<Props> = ({ price }) => {
+const SubSaveHead: React.FC<Props> = ({ amount }) => {
   const { onClose, isOpen } = useCartContext();
   return (
     <HStack onClick={() => onClose()} cursor={"pointer"}>
@@ -23,7 +25,7 @@ const SubSaveHead: React.FC<Props> = ({ price }) => {
           fontSize={{ base: "18px", sm: "24px" }}
           sx={!isOpen ? styles.activeText : styles.disabledText}
         >
-          & Save ${(price / 4).toFixed(2)}
+          & Save ${((amount * PRICE) / 4).toFixed(2)}
         </Heading>
       </HStack>
     </HStack>

@@ -1,3 +1,4 @@
+export const PRICE = 7.99;
 import type { ReactNode } from "react";
 import React, { createContext, useContext, useReducer } from "react";
 
@@ -12,7 +13,6 @@ export type CartItemType = {
 type Init = {
   cartItems: CartItemType[];
 };
-
 const initialState: Init = {
   cartItems: [],
 };

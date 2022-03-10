@@ -18,19 +18,18 @@ const Product = () => {
     base: "https://ucarecdn.com/2fc05d89-17cf-4d37-86ce-c2bae68f1ad5/ChickenBoneBroth16ozMobile.jpg",
     md: "https://ucarecdn.com/b8234127-73ae-4c5a-861d-904e3e38aaf1/4PackChickenBoneBroth32oz.jpg",
   });
-  const PRICE = 7.99;
 
-  const [price, setPrice] = useState(PRICE);
+  const [amount, setAmount] = useState(1);
   const handleChange = (e: number) => {
     switch (e) {
       case (e = 0):
-        return setPrice(PRICE);
+        return setAmount(1);
       case (e = 1):
-        return setPrice(PRICE * 6);
+        return setAmount(6);
       case (e = 2):
-        return setPrice(PRICE * 12);
+        return setAmount(12);
       case (e = 3):
-        return setPrice(PRICE * 18);
+        return setAmount(18);
       default:
     }
   };
@@ -60,11 +59,14 @@ const Product = () => {
             {/*  Product Text*/}
             <ProductText />
             {/*Ordering Options  */}
-            <OrderOptions price={price} />
+            <OrderOptions amount={amount} />
             {/*  Quantity*/}
             <QuantityTabs handleChange={handleChange} />
             {/*Cart Button*/}
-            <AddToCartButton price={price} productName={"Chicken Bone Broth"} />
+            <AddToCartButton
+              amount={amount}
+              productName={"Chicken Bone Broth"}
+            />
           </VStack>
         </Container>
       </Flex>

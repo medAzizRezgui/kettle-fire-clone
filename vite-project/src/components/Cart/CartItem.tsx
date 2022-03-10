@@ -13,8 +13,8 @@ import { useCartContext } from "../../context/Cart/CartState";
 import React from "react";
 import { BsTrash } from "react-icons/bs";
 
-const CartItem: React.FC<CartItemType> = ({ name, amount, id }) => {
-  const { isOpen, addOneToCart, deleteOneFromCart, deleteAllFromCart } =
+const CartItem: React.FC<CartItemType> = ({ name, amount, id, price }) => {
+  const { addOneToCart, deleteOneFromCart, deleteAllFromCart } =
     useCartContext();
   return (
     <HStack w={"100%"}>
@@ -43,7 +43,7 @@ const CartItem: React.FC<CartItemType> = ({ name, amount, id }) => {
               -
             </Button>
           </HStack>
-          <Text>$ {(amount * (isOpen ? 7.99 : 5.99)).toFixed(2)}</Text>
+          <Text>$ {(amount * price).toFixed(2)}</Text>
         </HStack>
       </VStack>
     </HStack>

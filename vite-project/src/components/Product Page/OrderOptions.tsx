@@ -7,15 +7,15 @@ import OneTimeHead from "./OneTimeHead";
 import React from "react";
 import { useCartContext } from "../../context/Cart/CartState";
 type Props = {
-  price: number;
+  amount: number;
 };
 
-const OrderOptions: React.FC<Props> = ({ price }) => {
+const OrderOptions: React.FC<Props> = ({ amount }) => {
   const { isOpen, onOpen } = useCartContext();
   return (
     <VStack align={"start"} w={"100%"}>
       <VStack align={"start"} spacing={"10px"} my={"20px"}>
-        <SubSaveHead price={price} />
+        <SubSaveHead amount={amount} />
         {!isOpen && (
           <Box px={"10px"}>
             <VStack spacing={"20px"}>

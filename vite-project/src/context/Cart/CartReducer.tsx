@@ -11,10 +11,12 @@ type Action = {
 const CartReducer = (state: State, action: Action) => {
   switch (action.type) {
     case "addToCart": {
+      // Check if the item exists in the cart
       const isItemInCart = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
       if (isItemInCart) {
+        // if the item is in the cart, we gonna just add to it's amount
         return {
           ...state,
           cartItems: [
@@ -30,6 +32,7 @@ const CartReducer = (state: State, action: Action) => {
           ],
         };
       }
+      // if not we gonna just add it to the cart
       return {
         ...state,
         cartItems: [

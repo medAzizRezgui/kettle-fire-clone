@@ -3,32 +3,23 @@ import { Button, HStack, Text } from "@chakra-ui/react";
 import { darken } from "@chakra-ui/theme-tools";
 
 import { useCartContext } from "../../context/Cart/CartState";
+import { PRICE } from "../../context/Cart/CartState";
 
 type Props = {
-  price: number;
+  amount: number;
   productName: string;
 };
 
-const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
+const AddToCartButton: React.FC<Props> = ({ amount, productName }) => {
   const { addItemToCart, isOpen } = useCartContext();
 
-  const CalcFinalPrice = (price: number): number => {
-    if (!isOpen) {
-      return Number((price - price / 4).toFixed(2));
-    }
-    return price;
-  };
-  const CalcAmount = (): number => {
-    if (!isOpen) {
-      return Math.round(CalcFinalPrice(price) / 5.99);
-    }
-    return Math.round(CalcFinalPrice(price) / 7.99);
-  };
+  const newPrice = isOpen ? PRICE : Number((PRICE - PRICE / 4).toFixed(2));
+
   const item = {
     name: productName,
-    amount: CalcAmount(),
+    amount: amount,
     id: 1,
-    price: CalcFinalPrice(price),
+    price: newPrice,
   };
 
   return (
@@ -37,12 +28,12 @@ const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
         <HStack justify={"center"} align={"center"}>
           {isOpen ? (
             <Text fontSize={{ base: "16px", sm: "16px" }}>
-              $ {CalcFinalPrice(price)}
+              $ {newPrice * amount}
             </Text>
           ) : (
             <>
               <Text fontSize={{ base: "12px", sm: "16px" }}>
-                ${CalcFinalPrice(price)}
+                ${newPrice * amount}
               </Text>
               <Text
                 textDecoration={"line-through"}
@@ -50,7 +41,7 @@ const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
                 fontSize={{ base: "12px", sm: "16px" }}
               >
                 {" "}
-                ${CalcFinalPrice(price)}
+                ${PRICE * amount}
               </Text>
             </>
           )}
