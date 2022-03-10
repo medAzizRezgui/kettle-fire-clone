@@ -10,7 +10,7 @@ type Props = {
 };
 
 const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
-  const { handleAddToCart, isOpen } = useCartContext();
+  const { addItemToCart, isOpen } = useCartContext();
 
   const CalcFinalPrice = (price: number): number => {
     if (!isOpen) {
@@ -33,7 +33,7 @@ const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
 
   return (
     <>
-      <Button sx={styles.cartBtn} onClick={() => handleAddToCart(item)}>
+      <Button sx={styles.cartBtn} onClick={() => addItemToCart(item)}>
         <HStack justify={"center"} align={"center"}>
           {isOpen ? (
             <Text fontSize={{ base: "16px", sm: "16px" }}>

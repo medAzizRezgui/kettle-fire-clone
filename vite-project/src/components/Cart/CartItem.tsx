@@ -12,8 +12,9 @@ import type { CartItemType } from "../../context/Cart/CartState";
 import { useCartContext } from "../../context/Cart/CartState";
 import React from "react";
 import { BsTrash } from "react-icons/bs";
-const CartItem: React.FC<CartItemType> = ({ name, amount, price, id }) => {
-  const { isOpen, handleRemoveFromCart, handleRemoveAllFromCart } =
+
+const CartItem: React.FC<CartItemType> = ({ name, amount, id }) => {
+  const { isOpen, addOneToCart, deleteOneFromCart, deleteAllFromCart } =
     useCartContext();
   return (
     <HStack w={"100%"}>
@@ -24,23 +25,20 @@ const CartItem: React.FC<CartItemType> = ({ name, amount, price, id }) => {
             {" "}
             {name}
           </Heading>
-          <button onClick={() => handleRemoveAllFromCart(id)}>
+          <button onClick={() => deleteAllFromCart(id)}>
             <Icon as={BsTrash} />
           </button>
         </HStack>
         <HStack justify={"space-between"} w={"100%"}>
           <HStack spacing={"20px"}>
-            <Button
-              sx={styles.quantityBtn}
-              onClick={() => handleRemoveFromCart(id)}
-            >
+            <Button sx={styles.quantityBtn} onClick={() => addOneToCart(id)}>
               +
             </Button>
 
             <Text>{amount}</Text>
             <Button
               sx={styles.quantityBtn}
-              onClick={() => handleRemoveFromCart(id)}
+              onClick={() => deleteOneFromCart(id)}
             >
               -
             </Button>
