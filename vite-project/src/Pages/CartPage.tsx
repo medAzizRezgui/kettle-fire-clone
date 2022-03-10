@@ -1,38 +1,31 @@
 import React from "react";
-import Layout from "../sections/Layout/Layout";
-import { Container, Heading, Text, HStack } from "@chakra-ui/react";
+import { Container, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/Cart/CartState";
-
+import EmptyCart from "../components/Cart/EmptyCart";
+import CartItem from "../components/Cart/CartItem";
 const CartPage = () => {
-  const { cartItems, handleRemoveFromCart, handleRemoveAllFromCart, isOpen } =
-    useCartContext();
+  const { cartItems } = useCartContext();
   return (
-    <Layout>
-      <Container variant={"fluid"} mt="60px">
-        <Container variant={"responsive"} py={"30px"}>
-          <Heading>This is the cart</Heading>
-          <Link to={"/product"}>
-            <Text>Back</Text>
-          </Link>
-          {cartItems.map((item, i) => (
-            <HStack key={i}>
-              <Heading>name : {item.name}</Heading>
-              <Text>
-                price : $ {(item.amount * (isOpen ? 7.99 : 5.99)).toFixed(2)}
-              </Text>
-              <Text>amount :{item.amount}</Text>
-              <button onClick={() => handleRemoveFromCart(item.id)}>
-                Delete 1 item
-              </button>
-              <button onClick={() => handleRemoveAllFromCart(item.id)}>
-                Delete all
-              </button>
-            </HStack>
-          ))}
-        </Container>
+    <Container variant={"fluid"} bg={"brandCream"} h={"100vh"}>
+      <Container variant={"responsive"}>
+        <Link to={"/product"}>
+          <Text>Back</Text>
+        </Link>
+        {/*empty cart*/}
+        {cartItems.length === 0 && <EmptyCart />}
+        {/*Cart Items*/}
+        {cartItems.map((item, i) => (
+          <CartItem
+            key={i}
+            id={item.id}
+            amount={item.amount}
+            price={item.price}
+            name={item.name}
+          />
+        ))}
       </Container>
-    </Layout>
+    </Container>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { Circle, Heading, HStack } from "@chakra-ui/react";
-import { useCounter } from "../../context/Cart/CartState";
+import { useCartContext } from "../../context/Cart/CartState";
 type Props = {
   price: number;
 };
 const SubSaveHead: React.FC<Props> = ({ price }) => {
-  const { onClose, isOpen } = useCounter();
+  const { onClose, isOpen } = useCartContext();
   return (
     <HStack onClick={() => onClose()} cursor={"pointer"}>
       <Circle border={"2px solid"} borderColor={"primary"} size={"30px"}>

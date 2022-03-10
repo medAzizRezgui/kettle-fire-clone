@@ -6,7 +6,6 @@ import { useCartContext } from "../../context/Cart/CartState";
 
 type Props = {
   price: number;
-
   productName: string;
 };
 
@@ -33,31 +32,35 @@ const AddToCartButton: React.FC<Props> = ({ price, productName }) => {
   };
 
   return (
-    <Button sx={styles.cartBtn} onClick={() => handleAddToCart(item)}>
-      <HStack justify={"center"} align={"center"}>
-        {isOpen ? (
-          <Text fontSize={{ base: "16px", sm: "16px" }}>$ {price}</Text>
-        ) : (
-          <>
-            <Text fontSize={{ base: "12px", sm: "16px" }}>
-              ${(price - price / 4).toFixed(2)}
+    <>
+      <Button sx={styles.cartBtn} onClick={() => handleAddToCart(item)}>
+        <HStack justify={"center"} align={"center"}>
+          {isOpen ? (
+            <Text fontSize={{ base: "16px", sm: "16px" }}>
+              $ {CalcFinalPrice(price)}
             </Text>
-            <Text
-              textDecoration={"line-through"}
-              opacity={0.4}
-              fontSize={{ base: "12px", sm: "16px" }}
-            >
-              {" "}
-              ${price}
-            </Text>
-          </>
-        )}
-        <Text fontWeight="300" opacity={0.8}>
-          |
-        </Text>
-        <Text fontSize={{ base: "12px", sm: "16px" }}>ADD TO CART </Text>
-      </HStack>
-    </Button>
+          ) : (
+            <>
+              <Text fontSize={{ base: "12px", sm: "16px" }}>
+                ${CalcFinalPrice(price)}
+              </Text>
+              <Text
+                textDecoration={"line-through"}
+                opacity={0.4}
+                fontSize={{ base: "12px", sm: "16px" }}
+              >
+                {" "}
+                ${CalcFinalPrice(price)}
+              </Text>
+            </>
+          )}
+          <Text fontWeight="300" opacity={0.8}>
+            |
+          </Text>
+          <Text fontSize={{ base: "12px", sm: "16px" }}>ADD TO CART </Text>
+        </HStack>
+      </Button>
+    </>
   );
 };
 

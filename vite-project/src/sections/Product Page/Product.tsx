@@ -64,7 +64,7 @@ const Product = () => {
             {/*  Quantity*/}
             <QuantityTabs handleChange={handleChange} />
             {/*Cart Button*/}
-            <AddToCartButton price={price} productName={"Cold Ice"} />
+            <AddToCartButton price={price} productName={"Chicken Bone Broth"} />
           </VStack>
         </Container>
       </Flex>

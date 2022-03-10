@@ -5,13 +5,13 @@ import SelectDays from "./SelectDays";
 import FeaturesList from "./FeaturesList";
 import OneTimeHead from "./OneTimeHead";
 import React from "react";
-import { useCounter } from "../../context/Cart/CartState";
+import { useCartContext } from "../../context/Cart/CartState";
 type Props = {
   price: number;
 };
 
 const OrderOptions: React.FC<Props> = ({ price }) => {
-  const { isOpen, onOpen } = useCounter();
+  const { isOpen, onOpen } = useCartContext();
   return (
     <VStack align={"start"} w={"100%"}>
       <VStack align={"start"} spacing={"10px"} my={"20px"}>

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import React, { createContext, useContext, useState } from "react";
 
 import { useDisclosure } from "@chakra-ui/react";
-export type CartItem = {
+export type CartItemType = {
   name: string;
   amount: number;
   price: number;
@@ -10,17 +10,13 @@ export type CartItem = {
 };
 
 export type CartItemContextType = {
-  cartItems: CartItem[];
-  handleAddToCart: (item: CartItem) => void;
+  cartItems: CartItemType[];
+  handleAddToCart: (item: CartItemType) => void;
   handleRemoveFromCart: (id: number) => void;
   handleRemoveAllFromCart: (id: number) => void;
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
-};
-export type Action = {
-  type: "add" | "delete";
-  payload?: any;
 };
 
 const CartContext = createContext<CartItemContextType>(
@@ -28,11 +24,11 @@ const CartContext = createContext<CartItemContextType>(
 );
 
 export function CounterProvider({ children }: { children: ReactNode }) {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItemType[]>([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // Handle Adding an Item to the cart
-  const handleAddToCart = (clickedItem: CartItem) => {
+  const handleAddToCart = (clickedItem: CartItemType) => {
     setCartItems((prev) => {
       // 1. Is the item already in cart ?
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
@@ -58,7 +54,7 @@ export function CounterProvider({ children }: { children: ReactNode }) {
         } else {
           return [...acc, item];
         }
-      }, [] as CartItem[])
+      }, [] as CartItemType[])
     );
   };
 

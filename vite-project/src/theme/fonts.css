@@ -175,6 +175,8 @@
 
 .wfx-icon-cart:before {
   content: "\74";
+  color: #aa131d;
+  font-size: 150px;
 }
 
 .wfx-icon-pot:before {
