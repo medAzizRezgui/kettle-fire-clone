@@ -14,7 +14,9 @@ const breakpoints = createBreakpoints({
 const theme = extendTheme({
   styles: {
     global: {
-      "html, body": {},
+      "html, body": {
+        scrollBehavior: "smooth",
+      },
     },
   },
   breakpoints,

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, HStack, Text } from "@chakra-ui/react";
+import { Button, HStack, Text, useToast } from "@chakra-ui/react";
 import { darken } from "@chakra-ui/theme-tools";
 
 import { useCartContext } from "../../context/Cart/CartState";
@@ -21,10 +21,21 @@ const AddToCartButton: React.FC<Props> = ({ amount, productName }) => {
     id: 1,
     price: newPrice,
   };
+  const toast = useToast();
+  const handleItemAdd = () => {
+    addItemToCart(item);
+    toast({
+      title: "Item Added Successfully ",
+      description: "Please check your Shopping Cart",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+  };
 
   return (
     <>
-      <Button sx={styles.cartBtn} onClick={() => addItemToCart(item)}>
+      <Button sx={styles.cartBtn} onClick={() => handleItemAdd()}>
         <HStack justify={"center"} align={"center"}>
           {isOpen ? (
             <Text fontSize={{ base: "16px", sm: "16px" }}>
